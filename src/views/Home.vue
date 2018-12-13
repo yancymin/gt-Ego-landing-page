@@ -63,6 +63,26 @@
         </section>
       </div>
 
+      <div class="secondary">
+        <div class="section-wrap">
+          <section class="effect">
+            <span>满足需求</span>
+            <h2>Ego 帮助满足用户隐私保护的要求和企业 KYC 需求</h2>
+            <p>用户可以在 Ego 应用程序选择不同的认证方进行多类型的身份信息认证，所有经认证的身份信息只会保存在本地，任何第三方未获得用户授权都无法获得该信息，保证您的信息不被泄露。
+              <br><br>企业用户可以选择不同的身份信息，在获得用户的许可后即可或者经过认证的各类身份信息，满足您的 KYC 需求。</p>
+          </section>
+          <section class="scene">
+            <span>EGO 优势</span>
+            <h2>打造网络通用身份，助您享受互联网生活</h2>
+          </section>
+          <section class="contact">
+            <span>获取服务</span>
+            <h2>Ego 邀请更多企业和我们一起完善身份安全生态</h2>
+            <p>获取更私密安全的 KYC 服务，请留下您的联系方式，我们会尽快与您联系。</p>
+          </section>
+        </div>
+      </div>
+
       <footer>
         <div class="footer-wrap">
           <div class="copyright-info">
@@ -103,222 +123,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../style/global.scss";
-
-.main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  .header {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    .section-wrap {
-      width: 55%;
-      display: flex;
-      justify-content: center;
-      section {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        .logo {
-          display: flex;
-          align-items: center;
-          margin-bottom: 40px;
-
-          img {
-            &:last-child {
-              position: relative;
-              top: -4px;
-              margin-left: 10px;
-            }
-          }
-        }
-
-        h1 {
-          margin-bottom: 24px;
-          @include h1(46px, 46px);
-        }
-
-        p {
-          width: 497px;
-          margin-bottom: 60px;
-          @include p(15px, 26px);
-        }
-
-        ul {
-          display: flex;
-          justify-content: flex-start;
-          li {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 178px;
-            height: 62px;
-            border: 1px solid $borderColor;
-            border-radius: 6px;
-
-            &:first-child {
-              margin-right: 14px;
-            }
-          }
-        }
-      }
-    }
-    .hero-wrap {
-      width: 45%;
-      height: 100vh;
-      background-color: $bgColor;
-    }
-    .mouse {
-      position: absolute;
-      left: 50%;
-      bottom: 20px;
-    }
-  }
-
-  .primary {
-    display: flex;
-    justify-content: center;
-    width: 1180px;
-    padding: 120px 0;
-
-    section {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      span {
-        text-align: center;
-        font-size: 18px;
-        line-height: 18px;
-        color: $blue;
-        margin-left: -24px;
-        @include fontMedium;
-
-        &:before {
-          content: "";
-          display: inline-block;
-          width: 24px;
-          height: 3px;
-          background-color: $blue;
-          position: relative;
-          top: 20px;
-          left: 48px;
-          border-radius: 3px 3px 0 0;
-        }
-      }
-      h2 {
-        width: 640px;
-        text-align: center;
-        align-self: center;
-        margin-bottom: 70px;
-        margin-top: 36px;
-        @include h2(36px, 54px);
-      }
-      .card-wrap {
-        width: 1180px;
-        display: flex;
-        justify-content: space-between;
-
-        .card {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          flex-direction: column;
-          height: 420px;
-          width: 588px;
-          background-color: #f0f4fa;
-
-          .card-content {
-            img {
-              width: 120px;
-              height: 120px;
-              margin-bottom: 36px;
-            }
-            h3 {
-              margin-bottom: 22px;
-              @include h3(24px, 24px);
-            }
-            p {
-              width: 400px;
-              @include p(16px, 26px);
-            }
-          }
-        }
-      }
-    }
-  }
-  footer {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    background-color: $dark;
-
-    .footer-wrap {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      width: 1180px;
-      padding: 40px 0 24px 0;
-
-      .copyright-info {
-        img {
-          margin-bottom: 32px;
-        }
-        p {
-          font-family: source-han-sans-simplified-c, sans-serif;
-          font-weight: 300;
-          font-style: normal;
-          width: 218px;
-          font-size: 12px;
-          line-height: 19px;
-          color: $textColor-2;
-          opacity: 0.8;
-        }
-      }
-    }
-
-    .info {
-      width: 390px;
-      ul {
-        display: flex;
-        justify-content: space-between;
-
-        li {
-          margin-left: 22px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          @include p(12px, 12px);
-
-          &:last-child {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-
-            a {
-              margin-left: 8px;
-            }
-          }
-
-          a {
-            text-decoration-line: none;
-            transition: $normalTs;
-            @include p(13px, 13px);
-            
-
-            &:hover {
-              color: $borderColor;
-            text-decoration-line: underline;
-            }
-          }
-        }
-      }
-    }
-  }
-}
+@import "../style/index.scss";
 </style>
+
