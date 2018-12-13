@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="42px" height="41px" viewBox="0 0 42 41" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52 (66869) - http://www.bohemiancoding.com/sketch -->
+    <defs>
+        <linearGradient x1="50%" y1="-2.48949813e-15%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#1E2D4A" offset="0%"></stop>
+            <stop stop-color="#0D1424" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50.3138548%" y1="0.313854769%" x2="50.3138548%" y2="99.1319329%" id="linearGradient-2">
+            <stop stop-color="#748095" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#748095" stop-opacity="0.239470109" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-3">
+            <stop stop-color="#53B1FF" offset="0%"></stop>
+            <stop stop-color="#2979FF" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-4">
+            <stop stop-color="#74E4FF" offset="0%"></stop>
+            <stop stop-color="#40C4FF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="index-copy" transform="translate(-129.000000, -207.000000)">
+            <g id="Group-2" transform="translate(130.000000, 205.000000)">
+                <g id="2" transform="translate(0.000000, 2.000000)">
+                    <g id="分组-3" fill="url(#linearGradient-1)" stroke="url(#linearGradient-2)" stroke-width="0.5">
+                        <rect id="矩形" x="0" y="0" width="40" height="40" rx="9.28571429"></rect>
+                    </g>
+                    <g id="分组-2" transform="translate(19.521845, 20.478155) rotate(-45.000000) translate(-19.521845, -20.478155) translate(5.236130, 7.978155)" fill-rule="nonzero">
+                        <g id="分组" transform="translate(-0.000000, 0.000000)">
+                            <path d="M25,4 L12.5,4 C7.80557963,4 4,7.80557963 4,12.5 C4,17.1944204 7.80557963,21 12.5,21 L25,21 L25,25 L12.5,25 C5.59644063,25 8.45442189e-16,19.4035594 0,12.5 C-8.45442189e-16,5.59644063 5.59644063,1.26816328e-15 12.5,0 L25,0 L25,4 Z" id="合并形状" fill="url(#linearGradient-3)"></path>
+                            <path d="M25,4 L13.8347736,4 C16.1176136,1.53964895 19.3790046,-2.77565434e-14 23,-2.84217094e-14 L25,-2.84217094e-14 L25,4 Z M25,21 L25,25 L23,25 C19.3790046,25 16.1176136,23.4603511 13.8347736,21 L25,21 Z" id="合并形状" fill-opacity="0.377151268" fill="#0D1424"></path>
+                            <path d="M25,-7.10542736e-15 L25,4 C20.3055796,4 16.5,7.80557963 16.5,12.5 C16.5,17.1944204 20.3055796,21 25,21 L25,25 C18.0964406,25 12.5,19.4035594 12.5,12.5 C12.5,5.59644063 18.0964406,-7.10542736e-15 25,-7.10542736e-15 Z" id="合并形状" fill="url(#linearGradient-4)"></path>
+                            <circle id="椭圆形" fill="#FFFFFF" cx="25" cy="12.5" r="3.5"></circle>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

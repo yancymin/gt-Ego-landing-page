@@ -1,0 +1,67 @@
+// ---------------color---------------- 
+$bgColor: #F0F4FA;
+$borderColor: #B8C7E0;
+$blue: #4C9AFF;
+// ---------------------------- text
+$textColor-1: #1B2638;
+$textColor-2: #798392;
+// ---------------font---------------- 
+@mixin h1($fontSize, $lineHeight) {
+    color: $textColor-1;
+    font-size: $fontSize;
+    line-height: $lineHeight;
+    @include fontBold;
+}
+
+@mixin h2($fontSize, $lineHeight) {
+    color: $textColor-1;
+    font-size: $fontSize;
+    line-height: $lineHeight;
+    @include fontLight;
+}
+
+@mixin h3($fontSize, $lineHeight) {
+    color: $textColor-1;
+    font-size: $fontSize;
+    line-height: $lineHeight;
+    @include fontMedium;
+}
+
+@mixin p($fontSize, $lineHeight) {
+    color: $textColor-2;
+    font-size: $fontSize;
+    line-height: $lineHeight;
+    text-align: left;
+    @include fontNormal;
+}
+
+@mixin fontBold {
+    font-family: source-han-sans-simplified-c, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+@mixin fontMedium {
+    font-family: source-han-sans-simplified-c, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+@mixin fontLight {
+    font-family: source-han-sans-simplified-c, sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+@mixin fontNormal {
+    font-family: source-han-sans-simplified-c, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    min-height: 100%;
+}
