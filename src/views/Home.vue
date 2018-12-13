@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <div class="main">
+    <div class="main" id="main">
       <div class="header">
         <div class="section-wrap">
           <section>
@@ -49,7 +49,7 @@
                 <p>用户在互联网世界中，提交个人的各类信息享受到各种便利的同时，也可能被滥用于后续的营销，被贩卖给灰黑产，用户被骚扰，被诈骗等问题层出不穷。</p>
               </div>
             </div>
-            <div class="card">
+            <div class="card" id="card2">
               <div class="card-content">
                 <img
                   src="../assets/card-2.png"
@@ -63,11 +63,14 @@
         </section>
       </div>
 
-      <div class="secondary">
+      <div
+        class="secondary"
+        id="secondary"
+      >
         <div class="section-wrap">
           <section class="effect">
             <span>中心化系统的固有劣势</span>
-            <h2>Ego 帮助满足用户隐私保护的要求和企业 KYC 需求</h2>
+            <h2 id="animate2">Ego 帮助满足用户隐私保护的要求和企业 KYC 需求</h2>
             <p>用户可以在 Ego 应用程序选择不同的认证方进行多类型的身份信息认证，所有经认证的身份信息只会保存在本地，任何第三方未获得用户授权都无法获得该信息，保证您的信息不被泄露。
               <br><br>企业用户可以选择不同的身份信息，在获得用户的许可后即可或者经过认证的各类身份信息，满足您的 KYC 需求。</p>
           </section>
@@ -118,7 +121,21 @@ import mouse from "../components/mouse.vue";
 
 export default {
   name: "home",
-  components: { mouse }
+  components: { mouse },
+  mounted: function() {
+    let secondary = document.querySelector("#main");
+    let card2 = document.querySelector("#card2");
+    let offset = card2.offsetTop+card2.offsetHeight;
+    
+    let scroller = window.addEventListener("scroll", function() {
+      if(offset-window.scrollY<=0) {
+        secondary.classList.add("main-dark")
+      } 
+      if(offset-window.scrollY>0) {
+        secondary.classList.remove("main-dark")
+      } 
+    });
+  }
 };
 </script>
 

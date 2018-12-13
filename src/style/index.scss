@@ -3,6 +3,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+
     .header {
         width: 100vw;
         height: 100vh;
@@ -140,7 +142,6 @@
         flex-direction: column;
         align-items: center;
         padding: 200px 0;
-        background-color: $bgColor-dark;
         .section-wrap {
             width: 1180px;
             section {
@@ -165,7 +166,6 @@
                     }
                 }
                 h2 {
-                    color: #B8C7E0 !important;
                     margin-bottom: 40px;
                     margin-top: 36px;
                     @include h2(36px, 54px);
@@ -191,7 +191,6 @@
                     span {
                         display: inline;
                         text-align: right;
-
                         &::before {
                             left: 107px;
                         }
@@ -276,5 +275,28 @@
                 }
             }
         }
+    }
+}
+
+.main-dark {
+    background-color: #1B2638;
+    .secondary {
+        transition: $normalTs;
+            .section-wrap {
+                section {
+                    h2 {
+                        color: #B8C7E0 !important;
+                        // transition: $normalTs;
+    transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+
+                    }
+                    p {
+                        color: $textColor-2 !important;
+                        // transition: $normalTs;
+    transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+
+                    }
+                }
+            }
     }
 }
