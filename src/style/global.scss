@@ -2,9 +2,12 @@
 $bgColor: #F0F4FA;
 $borderColor: #B8C7E0;
 $blue: #4C9AFF;
+$dark: #0D1424;
 // ---------------------------- text
 $textColor-1: #1B2638;
 $textColor-2: #798392;
+// ---------------transition---------------
+$normalTs : all 0.3s ease;
 // ---------------font---------------- 
 @mixin h1($fontSize, $lineHeight) {
     color: $textColor-1;
