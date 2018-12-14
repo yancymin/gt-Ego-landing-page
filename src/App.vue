@@ -14,4 +14,9 @@
   text-align: left;
   color: $textColor-1;
 }
+
+::selection {
+    background: $borderColor;
+    color: #fff;
+}
 </style>

@@ -1,6 +1,9 @@
 <template>
   <div class="home">
-    <div class="main" id="main">
+    <div
+      class="main"
+      id="main"
+    >
       <div class="header">
         <div class="section-wrap">
           <section>
@@ -49,7 +52,10 @@
                 <p>用户在互联网世界中，提交个人的各类信息享受到各种便利的同时，也可能被滥用于后续的营销，被贩卖给灰黑产，用户被骚扰，被诈骗等问题层出不穷。</p>
               </div>
             </div>
-            <div class="card" id="card2">
+            <div
+              class="card"
+              id="card2"
+            >
               <div class="card-content">
                 <img
                   src="../assets/card-2.png"
@@ -77,6 +83,53 @@
           <section class="scene">
             <span>可复用的 KYC</span>
             <h2>打造网络通用身份，助您享受互联网生活</h2>
+            <div class="pic-flow">
+              <div class="column">
+                <div class="pic"><img
+                    src="../assets/med.jpg"
+                    alt=""
+                  ></div>
+              </div>
+              <div class="column">
+                <div class="pic">
+                  <div class="pic-info">
+                    <div class="cover-blue"></div>
+                    <img
+                      src="../assets/finance.svg"
+                      alt=""
+                    >
+                    <p>金融</p>
+                  </div>
+                  <img
+                    src="../assets/finance.jpg"
+                    alt=""
+                  >
+                </div>
+                <div class="pic pic2"><img
+                    src="../assets/social.jpg"
+                    alt=""
+                  ></div>
+              </div>
+              <div class="column">
+                <div class="pic"><img
+                    src="../assets/trans.jpg"
+                    alt=""
+                  ></div>
+              </div>
+              <div class="column">
+                <div class="pic"><img
+                    src="../assets/shop.jpg"
+                    alt=""
+                  ></div>
+
+              </div>
+              <div class="column">
+                <div class="pic"><img
+                    src="../assets/renting.png"
+                    alt=""
+                  ></div>
+              </div>
+            </div>
           </section>
           <section class="contact">
             <span>多场景通用</span>
@@ -125,15 +178,15 @@ export default {
   mounted: function() {
     let secondary = document.querySelector("#main");
     let card2 = document.querySelector("#card2");
-    let offset = card2.offsetTop+card2.offsetHeight;
-    
+    let offset = card2.offsetTop + card2.offsetHeight;
+
     let scroller = window.addEventListener("scroll", function() {
-      if(offset-window.scrollY<=0) {
-        secondary.classList.add("main-dark")
-      } 
-      if(offset-window.scrollY>0) {
-        secondary.classList.remove("main-dark")
-      } 
+      if (offset - window.scrollY <= 0) {
+        secondary.classList.add("main-dark");
+      }
+      if (offset - window.scrollY > 0) {
+        secondary.classList.remove("main-dark");
+      }
     });
   }
 };
