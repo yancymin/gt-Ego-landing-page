@@ -93,12 +93,13 @@
               <div class="column">
                 <div class="pic">
                   <div class="pic-info">
-                    <div class="cover-blue"></div>
-                    <img
-                      src="../assets/finance.svg"
-                      alt=""
-                    >
-                    <p>金融</p>
+                    <div class="pic_info-wrap">
+                      <img
+                        src="../assets/finance.svg"
+                        alt=""
+                      >
+                      <p>金融</p>
+                    </div>
                   </div>
                   <img
                     src="../assets/finance.jpg"
