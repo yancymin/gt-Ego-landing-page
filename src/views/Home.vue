@@ -37,18 +37,46 @@
         </div>
         <div class="hero-wrap">
           <main>
-            <div class="phone-column">
-              <img src="../assets/4.jpg" alt="">
-              <img src="../assets/1.jpg" alt="">
-            </div>
-            <div class="phone-column">
-              <img src="../assets/5.jpg" alt="">
-              <img src="../assets/2.jpg" alt="">
-            </div>
-            <div class="phone-column">
-              <img src="../assets/5.jpg" alt="">
-              <img src="../assets/4.jpg" alt="">
-            </div>
+            <section id="hero-section">
+              <div class="container">
+                <div class="space"></div>
+                <div class="space"></div><a
+                  class="iphonex"
+                >
+                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/945546/EGO.jpg"></a>
+              </div>
+              <div class="container">
+                <div class="space"></div><a class="iphonex">
+                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/945546/%E5%85%A8%E9%83%A8%E6%8E%88%E6%9D%83.jpg"></a><a class="iphonex">
+                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/945546/%E6%8E%88%E6%9D%83%E8%AF%A6%E6%83%8503.jpg"></a>
+              </div>
+              <div class="container"><a class="iphonex">
+                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/945546/%E8%BA%AB%E4%BB%BD.jpg"></a><a class="iphonex">
+                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/945546/%E6%8C%87%E7%BA%B9%E6%8E%88%E6%9D%83.jpg"></a>
+              </div>
+            </section>
+          </main>
+        </div>
+        <div class="hero-wrap" id="hero-wrap">
+                              <main id="main-v">
+            <section id="hero-section">
+              <div class="container">
+                <div class="space"></div>
+                <div class="space"></div><a
+                  class="iphonex unshow"
+                >
+                  <img src=""></a>
+              </div>
+              <div class="container">
+                <div class="space"></div><a class="iphonex unshow">
+                  <img src=""></a><a class="iphonex unshow">
+                  <img src=""></a>
+              </div>
+              <div class="container"><a class="iphonex unshow">
+                  <img src=""></a><a class="iphonex">
+                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/945546/%E6%8C%87%E7%BA%B9%E6%8E%88%E6%9D%83.jpg"></a>
+              </div>
+            </section>
           </main>
         </div>
         <mouse />

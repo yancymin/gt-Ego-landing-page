@@ -58,72 +58,85 @@
                 }
             }
         }
-        .hero-wrap {
-            position: relative;
-            width: 45%;
-            height: 100vh;
-            overflow: hidden;
-            background-color: $bgColor;
+        #hero-wrap {
+            position: absolute !important;
+            top: 0;
+            right: 0;
+            z-index: 0;
+            background: none;
 
-            main {
-                position: absolute;
-                top: -43vh;
-                // left: 35vw;
-                // width: 100%;
-                right: -60vw;
-                display: flex;
-                justify-content: space-between;
-                height: 100vh;
-                pointer-events: none;
+            #main-v {
+                z-index: 0;
+                position: relative;
+                left: 0;
+                background: none;
+                overflow: visible;
 
-
-                .phone-column {
-                    display: flex;
-                    align-items: center;
-                    flex-direction: column;
-                    flex-wrap: nowrap;
-                    margin: 0 80px;
-                    transform: rotate(45deg);
-                    animation: moving 2s ease;
-
-
-                    &:nth-of-type(2) {
-                        position: relative;
-                        top: 450px;
-                        left: -450px;
-                    }
-                    &:nth-of-type(3) {
-                        position: relative;
-                        top: 450px;
-                        left: -450px;
-                    }
-
-                    img {
-                        height: 55%;
-                        margin: 30px;
-                        padding: 6%;
-                        background-color: #fff;
-                        border-radius: 32px;
-                        box-shadow: 10px 20px 30px rgb(205, 211, 221);
-                        animation: moving2 2s ease;
-                    }
-
-                    @keyframes moving {
-                        0% {
-                          margin: 8%;
-                          opacity: 0;
-                        }
-                      }
-
-                    @keyframes moving2 {
-                        0% {
-                          margin: -4%;
-                          opacity: 0;
-                        }
-                      }
+                .unshow {
+                   opacity: 0;
                 }
             }
-           
+        }
+        .hero-wrap {
+            z-index: 100;
+            position: relative;
+            width: 45%;
+            height: 100vh; // overflow: hidden;
+            background-color: $bgColor;
+            $main-color: #F0F4FA;
+            .iphonex {
+                img {
+                    height: calc(2436px / 2);
+                    width: calc(1125px / 2);
+                    border: 0;
+                    background: #ddd;
+                    pointer-events: none;
+                }
+                border: 2.1rem solid $main-color;
+                border-image: linear-gradient(to bottom, transparent, #fff 40%, #fff 60%, transparent) 1;
+                display: inline-flex;
+                border-radius: 7rem;
+                box-shadow: rgba(0, 0, 0, .3) 1.75rem 1.75rem 7rem,
+                rgba(0, 0, 0, .2) 0 0 .5rem;
+                overflow: hidden;
+                transform: translate(0);
+                transition: all .6s ease-in;
+            } // disposition
+            main {
+                z-index: 1;
+                height: 100vh;
+                background: $main-color;
+                overflow: hidden;
+            }
+            
+            section {
+                display: flex;
+                flex-direction: row-reverse;
+                flex-wrap: nowrap;
+                transform: scale(calc(1 / 2));
+                transform-origin: -10% -10%;
+                will-change: transform;
+            }
+            .container {
+                display: flex;
+                flex-direction: column;
+                transform: rotate(45deg);
+                transform-origin: 300% 100%;
+                will-change: transform;
+                .space {
+                    margin-top: 140%;
+                }
+            }
+            .iphonex {
+                animation: moving 1.5s ease-out;
+                margin: 3rem 12rem;
+                user-select: none;
+            }
+            @keyframes moving {
+                0% {
+                    margin: 12rem 24rem;
+                }
+            }
         }
         .mouse {
             position: absolute;
@@ -517,5 +530,24 @@
                 }
             }
         }
+    }
+}
+
+@media (min-height: 1010px) {
+    #hero-section {
+        transform: scale(0.7);
+    }
+}
+
+@media (min-width: 2000px) {
+    #hero-section {
+        transform-origin: -95% -2%;
+        transform: scale(0.7);
+    }
+}
+
+@media (max-width: 2000px) {
+    #hero-section {
+        transform-origin: -10% -3%;
     }
 }
