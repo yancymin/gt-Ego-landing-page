@@ -4,6 +4,7 @@
     flex-direction: column;
     align-items: center;
     transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+    overflow: hidden;
     .header {
         width: 100vw;
         height: 100vh;
@@ -58,9 +59,71 @@
             }
         }
         .hero-wrap {
+            position: relative;
             width: 45%;
             height: 100vh;
+            overflow: hidden;
             background-color: $bgColor;
+
+            main {
+                position: absolute;
+                top: -43vh;
+                // left: 35vw;
+                // width: 100%;
+                right: -60vw;
+                display: flex;
+                justify-content: space-between;
+                height: 100vh;
+                pointer-events: none;
+
+
+                .phone-column {
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    flex-wrap: nowrap;
+                    margin: 0 80px;
+                    transform: rotate(45deg);
+                    animation: moving 2s ease;
+
+
+                    &:nth-of-type(2) {
+                        position: relative;
+                        top: 450px;
+                        left: -450px;
+                    }
+                    &:nth-of-type(3) {
+                        position: relative;
+                        top: 450px;
+                        left: -450px;
+                    }
+
+                    img {
+                        height: 55%;
+                        margin: 30px;
+                        padding: 6%;
+                        background-color: #fff;
+                        border-radius: 32px;
+                        box-shadow: 10px 20px 30px rgb(205, 211, 221);
+                        animation: moving2 2s ease;
+                    }
+
+                    @keyframes moving {
+                        0% {
+                          margin: 8%;
+                          opacity: 0;
+                        }
+                      }
+
+                    @keyframes moving2 {
+                        0% {
+                          margin: -4%;
+                          opacity: 0;
+                        }
+                      }
+                }
+            }
+           
         }
         .mouse {
             position: absolute;

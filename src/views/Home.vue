@@ -20,12 +20,14 @@
             <h1>区块链身份安全平台</h1>
             <p>Ego 是新一代去中心化的用户身份解决方案。我们提供多类型的身份验证，并将身份信息认证记录上传到区块链。用户通过 Ego 可以安全便捷的使用其它第三方的相关服务，而无需反复注册账号或者认证身份信息。</p>
             <ul>
-              <li><a href="">
+              <li>
+                <a href="">
                   <img
                     src="../assets/ios.svg"
                     alt=""
                   ></a> </li>
-              <li><a href=""><img
+              <li>
+                <a href=""><img
                     src="../assets/android.svg"
                     alt=""
                   >
@@ -34,7 +36,20 @@
           </section>
         </div>
         <div class="hero-wrap">
-
+          <main>
+            <div class="phone-column">
+              <img src="../assets/4.jpg" alt="">
+              <img src="../assets/1.jpg" alt="">
+            </div>
+            <div class="phone-column">
+              <img src="../assets/5.jpg" alt="">
+              <img src="../assets/2.jpg" alt="">
+            </div>
+            <div class="phone-column">
+              <img src="../assets/5.jpg" alt="">
+              <img src="../assets/4.jpg" alt="">
+            </div>
+          </main>
         </div>
         <mouse />
       </div>
@@ -183,10 +198,22 @@
             </div>
 
             <div class="pic-blur">
-              <img src="../assets/med.jpg" alt="">
-              <img src="../assets/finance.jpg" alt="">
-              <img src="../assets/shop.jpg" alt="">
-              <img src="../assets/finance.jpg" alt="">
+              <img
+                src="../assets/med.jpg"
+                alt=""
+              >
+              <img
+                src="../assets/finance.jpg"
+                alt=""
+              >
+              <img
+                src="../assets/shop.jpg"
+                alt=""
+              >
+              <img
+                src="../assets/finance.jpg"
+                alt=""
+              >
             </div>
           </section>
           <section class="contact">
