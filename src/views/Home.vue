@@ -85,10 +85,20 @@
             <h2>打造网络通用身份，助您享受互联网生活</h2>
             <div class="pic-flow">
               <div class="column">
-                <div class="pic"><img
+                <div class="pic">
+                  <div class="pic-info">
+                    <div class="pic_info-wrap">
+                      <img
+                        src="../assets/med.svg"
+                        alt=""
+                      >
+                      <p>医疗</p>
+                    </div>
+                  </div><img
                     src="../assets/med.jpg"
                     alt=""
-                  ></div>
+                  >
+                </div>
               </div>
               <div class="column">
                 <div class="pic">
@@ -106,30 +116,77 @@
                     alt=""
                   >
                 </div>
-                <div class="pic pic2"><img
+                <div class="pic pic2">
+                  <div class="pic-info">
+                    <div class="pic_info-wrap">
+                      <img
+                        src="../assets/social.svg"
+                        alt=""
+                      >
+                      <p>社交</p>
+                    </div>
+                  </div><img
                     src="../assets/social.jpg"
                     alt=""
-                  ></div>
+                  >
+                </div>
               </div>
               <div class="column">
-                <div class="pic"><img
+                <div class="pic">
+                  <div class="pic-info">
+                    <div class="pic_info-wrap">
+                      <img
+                        src="../assets/trans.svg"
+                        alt=""
+                      >
+                      <p>出行</p>
+                    </div>
+                  </div><img
                     src="../assets/trans.jpg"
                     alt=""
-                  ></div>
+                  >
+                </div>
               </div>
               <div class="column">
-                <div class="pic"><img
+                <div class="pic">
+                  <div class="pic-info">
+                    <div class="pic_info-wrap">
+                      <img
+                        src="../assets/shopping.svg"
+                        alt=""
+                      >
+                      <p>购物</p>
+                    </div>
+                  </div><img
                     src="../assets/shop.jpg"
                     alt=""
-                  ></div>
+                  >
+                </div>
 
               </div>
               <div class="column">
-                <div class="pic"><img
-                    src="../assets/renting.png"
+                <div class="pic">
+                  <div class="pic-info">
+                    <div class="pic_info-wrap">
+                      <img
+                        src="../assets/renting.svg"
+                        alt=""
+                      >
+                      <p>居住</p>
+                    </div>
+                  </div><img
+                    src="../assets/renting.jpg"
                     alt=""
-                  ></div>
+                  >
+                </div>
               </div>
+            </div>
+
+            <div class="pic-blur">
+              <img src="../assets/med.jpg" alt="">
+              <img src="../assets/finance.jpg" alt="">
+              <img src="../assets/shop.jpg" alt="">
+              <img src="../assets/finance.jpg" alt="">
             </div>
           </section>
           <section class="contact">
@@ -175,7 +232,9 @@ import mouse from "../components/mouse.vue";
 
 export default {
   name: "home",
-  components: { mouse },
+  components: {
+    mouse
+  },
   mounted: function() {
     let secondary = document.querySelector("#main");
     let card2 = document.querySelector("#card2");
@@ -196,4 +255,3 @@ export default {
 <style lang="scss">
 @import "../style/index.scss";
 </style>
-

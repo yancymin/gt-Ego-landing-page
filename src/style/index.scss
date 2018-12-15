@@ -144,9 +144,11 @@
         .section-wrap {
             width: 1180px;
             .scene {
+                position: relative;
                 .pic-flow {
+                    z-index: 100;
                     position: relative;
-                    top: -40px;
+                    top: -90px;
                     display: flex;
                     justify-content: center;
                     align-items: center;
@@ -170,6 +172,65 @@
                                 transition: $normalTs;
                                 transition-delay: 0.1s;
                             }
+                            .pic-info {
+                                opacity: 0;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: center;
+                                position: absolute;
+                                top: 0;
+                                right: 0;
+                                left: 0;
+                                bottom: 0;
+                                background: #0071ac;
+                                transition: $normalTs; // margin-top: 0.6%;
+                                transition-delay: 0.15s;
+                                overflow: hidden;
+                                .pic_info-wrap {
+                                    display: flex;
+                                    align-items: center;
+                                    flex-direction: column;
+                                    justify-content: center;
+                                    width: 100%;
+                                    height: 100%;
+                                    img {
+                                        opacity: 0;
+                                        height: 36%;
+                                        transform: scale(0.94);
+                                        transition: $normalTs;
+                                        margin-bottom: 8%;
+                                    }
+                                    p {
+                                        opacity: 0;
+                                        font-size: 40px;
+                                        color: $bgColor !important;
+                                        @include p(24px, 24px);
+                                        transition: $normalTs;
+                                        transform: scale(0.94);
+                                    }
+                                }
+                            }
+                            &:first-child,
+                            &:last-child {
+                                width: 100%;
+                                &:hover {
+                                    .pic-info {
+                                        opacity: 1;
+                                        background: rgba(66, 198, 228, 0.8);
+                                        opacity: 1;
+                                        transform: scale(1);
+                                        img {
+                                            opacity: 1;
+                                            transform: scale(1);
+                                        }
+                                        p {
+                                            opacity: 1;
+                                            transform: scale(1);
+                                        }
+                                    }
+                                }
+                            }
                         }
                         &:last-child {
                             margin-right: 0;
@@ -177,109 +238,68 @@
                         &:nth-of-type(1) {
                             position: relative;
                             top: -30px;
-                            width: 70%;
+                            width: 90%;
                         }
                         &:nth-of-type(2) {
-                            width: 80%;
+                            width: 133%;
                             .pic {
-                                .pic-info {
-                                    opacity: 0;
-                                    display: flex;
-                                    flex-direction: column;
-                                    justify-content: center;
-                                    align-items: center;
-                                    position: absolute;
-                                    top: 0;
-                                    right: 0;
-                                    left: 0;
-                                    bottom: 0;
-                                    background: #0071ac;
-                                    transition: $normalTs; // margin-top: 0.6%;
-                                    transition-delay: 0.15s;
-                                    overflow: hidden;
-                                    .pic_info-wrap {
-                                        display: flex;
-                                        align-items: center;
-                                        flex-direction: column;
-                                        height: 100%;
-                                        width: 100%;
-                                        justify-content: space-around;
-                                        padding: 10px;
-                                        img {
-                                            transform: scale(0.94);
-                                            transition: $normalTs;
-                                        }
-                                        p {
-                                            font-size: 40px;
-                                            color: $bgColor !important;
-                                            @include p(24px, 24px);
-                                            transition: $normalTs;
-                                            transform: scale(0.94);
-                                        }
-                                    }
-                                }
-                                &:first-child {
-                                    width: 100%;
-                                    &:hover {
-                                        .pic-info {
-                                            opacity: 1;
-                                            background: rgba(66, 198, 228, 0.8);
-                                            img {
-                                                transform: scale(1);
-                                            }
-                                            p {
-                                                transform: scale(1);
-                                            }
-                                        } // &>img {
-                                        //     opacity: 0.1;
-                                        // }
-                                    }
-                                }
                                 &:last-child {
-                                    width: 85%;
+                                    width: 66%;
                                     margin-top: 16px;
                                 }
                             }
                         }
                         &:nth-of-type(3) {
-                            width: 100%; // &::before {
-                            //     content: "";
-                            //     z-index: 0;
-                            //     position: absolute;
-                            //     right: 290px;
-                            //     top: -43px;
-                            //     display: block;
-                            //     width: 300px;
-                            //     height: 300px;
-                            //     background-image: url(../assets/shop.jpg);
-                            //     background-size: 100%;
-                            //     background-repeat: repeat;
-                            //     filter: blur(20px);
-                            //     opacity: 0.6;
-                            // }
-                            // &::after {
-                            //     content: "";
-                            //     z-index: 0;
-                            //     position: absolute;
-                            //     right: 290px;
-                            //     top: -43px;
-                            //     display: block;
-                            //     width: 200px;
-                            //     height: 140px;
-                            //     background-image: url(../assets/finance.jpg);
-                            //     background-size: 100%;
-                            //     background-repeat: repeat;
-                            //     filter: blur(20px);
-                            //     opacity: 0.6;
-                            // }
+                            width: 113%;
                         }
                         &:nth-of-type(4) {
                             position: relative;
-                            top: 80px;
-                            width: 60%;
+                            top: 100px;
+                            width: 75%;
                         }
                         &:nth-of-type(5) {
-                            width: 60%;
+                            width: 70%;
+                        }
+                    }
+                }
+                .pic-blur {
+                    position: relative;
+                    z-index: 0;
+                    top: -360px;
+                    width: 100vw;
+                    height: 600px;
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                    justify-content: space-between;
+                    align-self: center;
+                    img {
+                        position: relative;
+                        height: 40%;
+                        filter: blur(24px);
+                        opacity: 0.75;
+                        &:nth-of-type(1) {
+                            width: 14%;
+                            top: -10%;
+                            left: -10%;
+                        }
+                        &:nth-of-type(2) {
+                            width: 12%;
+                            top: 10%;
+                            left: 5%;
+                            filter: blur(35px);
+                        }
+                        &:nth-of-type(3) {
+                            width: 20%;
+                            height: 30%;
+                            left: -3%;
+                            top: -20%;
+                        }
+                        &:nth-of-type(4) {
+                            width: 14%;
+                            height: 25%;
+                            top: -20%;
+                            right: -10%;
                         }
                     }
                 }
