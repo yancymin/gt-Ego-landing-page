@@ -274,11 +274,11 @@
             <h2>Ego 邀请更多企业和我们一起完善身份安全生态</h2>
             <p>获取更私密安全的 KYC 服务，请留下您的联系方式，我们会尽快与您联系。</p>
             <div class="form-wrap">
-              <textField tittle="姓名"/>
-              <textField tittle="公司名称"/>
-              <textField tittle="职位"/>
-              <textField tittle="工作邮箱"/>
-              <textField tittle="手机号码"/>
+              <textField tittle="姓名" placeholder="请输入姓名"/>
+              <textField tittle="公司名称" placeholder="请输入公司名称"/>
+              <textField tittle="职位" placeholder="请输入职位"/>
+              <textField tittle="工作邮箱" placeholder="请输入工作邮箱"/>
+              <textField tittle="手机号码" placeholder="请输入手机号码"/>
               <textField tittle="需求" placeholder="请描述您想要获得什么样的服务"/>
               <button>提交</button>
             </div>
