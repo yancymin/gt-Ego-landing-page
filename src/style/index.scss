@@ -96,11 +96,12 @@
                 border-image: linear-gradient(to bottom, transparent, #fff 40%, #fff 60%, transparent) 1;
                 display: inline-flex;
                 border-radius: 7rem;
-                box-shadow: rgba(0, 0, 0, .3) 1.75rem 1.75rem 7rem,
-                rgba(0, 0, 0, .2) 0 0 .5rem;
+                box-shadow: rgb(164, 172, 189) 1.75rem 1.75rem 7rem,
+                rgba(0, 0, 0, .1) 0 0 .5rem;
                 overflow: hidden;
                 transform: translate(0);
-                transition: all .6s ease-in;
+                transition: all .6s ease;
+                will-change: transform;
             } // disposition
             main {
                 z-index: 1;
@@ -128,12 +129,13 @@
                 }
             }
             .iphonex {
-                animation: moving 1.5s ease-out;
+                animation: moving 1.5s ease;
                 margin: 3rem 12rem;
                 user-select: none;
             }
             @keyframes moving {
                 0% {
+                    opacity: 0;
                     margin: 12rem 24rem;
                 }
             }
@@ -539,15 +541,25 @@
     }
 }
 
-@media (min-width: 2000px) {
+@media (min-width: 1980px) {
     #hero-section {
         transform-origin: -95% -2%;
         transform: scale(0.7);
     }
 }
 
-@media (max-width: 2000px) {
+@media (max-width: 1980px) {
     #hero-section {
         transform-origin: -10% -3%;
+    }
+}
+@media (max-width: 1600px) {
+    #hero-section {
+        transform-origin: 20% -3%;
+    }
+}
+@media (max-width: 1280px) {
+    #hero-section {
+        transform-origin: 50% -3%;
     }
 }
