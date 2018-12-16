@@ -85,7 +85,7 @@
       <div class="primary">
         <section>
           <span>传统劣势</span>
-          <h2>中心化的身份系统既不利于保护隐私又消耗大量认证成本</h2>
+          <h2 id="h2">中心化的身份系统既不利于保护隐私又消耗大量认证成本</h2>
           <div class="card-wrap">
             <div class="card">
               <div class="card-content"><img
@@ -273,6 +273,15 @@
             <span>多场景通用</span>
             <h2>Ego 邀请更多企业和我们一起完善身份安全生态</h2>
             <p>获取更私密安全的 KYC 服务，请留下您的联系方式，我们会尽快与您联系。</p>
+            <div class="form-wrap">
+              <textField tittle="姓名"/>
+              <textField tittle="公司名称"/>
+              <textField tittle="职位"/>
+              <textField tittle="工作邮箱"/>
+              <textField tittle="手机号码"/>
+              <textField tittle="需求" placeholder="请描述您想要获得什么样的服务"/>
+              <button>提交</button>
+            </div>
           </section>
         </div>
       </div>
@@ -309,24 +318,30 @@
 
 <script>
 import mouse from "../components/mouse.vue";
+import textField from "../components/textField.vue";
 
 export default {
   name: "home",
   components: {
-    mouse
+    mouse,
+    textField
   },
   mounted: function() {
     let secondary = document.querySelector("#main");
     let card2 = document.querySelector("#card2");
+    let h2 = document.querySelector("#h2");
     let offset = card2.offsetTop + card2.offsetHeight;
+    let offset2 = h2.offsetTop + h2.offsetHeight;
 
     let scroller = window.addEventListener("scroll", function() {
       if (offset - window.scrollY <= 0) {
         secondary.classList.add("main-dark");
-        secondary.classList.remove("main-white-motion");
       }
       if (offset - window.scrollY > 0) {
         secondary.classList.remove("main-dark");
+      }
+
+      if (offset2 - window.scrollY <= 0) {
         secondary.classList.add("main-white-motion");
       }
     });

@@ -67,8 +67,7 @@
             height: 100vh;
             position: absolute;
             #hero-wrap {
-                width: 100%;
-                // position: absolute !important;
+                width: 100%; // position: absolute !important;
                 // top: 0;
                 // right: 0;
                 z-index: 0;
@@ -101,7 +100,7 @@
                     pointer-events: none;
                 }
                 border: 2.1rem solid $main-color;
-                border-image: linear-gradient(to bottom, transparent, #fff 40%, #fff 60%, transparent) 1;
+                border-image: linear-gradient(rgba(255, 255, 255, 0), #fff 40%, #fff 60%, rgba(255, 255, 255, 0)) 1;
                 display: inline-flex;
                 border-radius: 7rem;
                 box-shadow: rgb(164, 172, 189) 1.75rem 1.75rem 7rem,
@@ -225,7 +224,8 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 200px 0;
+        padding: 200px 0 0 0;
+        margin-bottom: -60px;
         .section-wrap {
             width: 1180px;
             .scene {
@@ -233,7 +233,7 @@
                 .pic-flow {
                     z-index: 100;
                     position: relative;
-                    top: -90px;
+                    top: -80px;
                     display: flex;
                     justify-content: center;
                     align-items: center;
@@ -348,9 +348,9 @@
                     }
                 }
                 .pic-blur {
-                    position: relative;
+                    position: absolute;
                     z-index: 0;
-                    top: -360px;
+                    top: 46%;
                     width: 100vw;
                     height: 600px;
                     display: flex;
@@ -361,8 +361,8 @@
                     img {
                         position: relative;
                         height: 40%;
-                        filter: blur(24px);
-                        opacity: 0.75;
+                        filter: blur(30px);
+                        opacity: 0.9;
                         &:nth-of-type(1) {
                             width: 14%;
                             top: -10%;
@@ -392,27 +392,30 @@
             section {
                 margin-bottom: 160px;
                 position: relative;
+                top: 30px;
                 .effect-app {
                     width: 50%;
                     position: absolute;
                     right: -60px;
-                    top: 0;
+                    top: -30px;
+                    pointer-events: none;
+                    perspective: 101rem;
+                    perspective-origin: 111% 0%;
                     .app {
                         opacity: 0;
                         position: absolute;
                         transform: rotateX(9deg) rotateZ(9deg) rotateY(-18deg);
                         &:nth-of-type(1) {
                             z-index: 100;
-                            width: 100%;
+                            width: 120%;
                         }
                         &:nth-of-type(2) {
                             z-index: 50;
-                            ;
-                            width: 90%;
+                            width: 105%;
                             left: 150px;
                         }
                         &:nth-of-type(3) {
-                            width: 80%;
+                            width: 90%;
                             left: 300px;
                         }
                     }
@@ -423,7 +426,7 @@
                         border-radius: 2rem;
                         box-shadow: 3px 10px 40px rgba(87, 99, 124, 0.377);
                         border-image: linear-gradient(to bottom, transparent, #fff 40%, #fff 60%, transparent) 1;
-                        ;
+                        transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
                     }
                 }
                 span {
@@ -467,7 +470,9 @@
                 &:nth-of-type(2) {
                     display: flex;
                     flex-direction: column;
-                    align-items: flex-end; // margin-bottom: 0;
+                    align-items: flex-end;
+                    position: relative;
+                    top: 100px;
                     span {
                         display: inline;
                         text-align: right;
@@ -494,6 +499,18 @@
                         width: 532px;
                     }
                 }
+            }
+        }
+        .contact {
+            position: relative;
+            .form-wrap {
+                position: relative;
+                top: -220px;
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+                align-items: flex-end;
+                flex-direction: column;
             }
         }
     }
@@ -580,6 +597,20 @@
                             background-color: #283548;
                             box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.4), 3px 10px 40px #0D1425;
                         }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.main-white-motion {
+    .secondary {
+        .section-wrap {
+            .effect {
+                .effect-app {
+                    .app {
+                        opacity: 0;
                         animation: appShow 1s ease forwards;
                         &:nth-of-type(2) {
                             animation-delay: 0.2s;
@@ -595,7 +626,7 @@
     @keyframes appShow {
         0% {
             opacity: 0;
-            transform: translateX(-20px) rotateX(9deg) rotateZ(9deg) rotateY(-18deg);
+            transform: translateX(-20px) rotateX(10deg) rotateZ(12deg) rotateY(-9deg);
         }
         30% {
             opacity: 1;
@@ -605,21 +636,7 @@
         }
         100% {
             opacity: 1;
-            transform: rotateX(9deg) rotateZ(9deg) rotateY(-18deg);
-        }
-    }
-}
-
-.main-white-motion {
-    .secondary {
-        .section-wrap {
-            .effect {
-                .effect-app {
-                    .app {
-                        opacity: 0;
-                    }
-                }
-            }
+            transform: rotateX(10deg) rotateZ(12deg) rotateY(-9deg);
         }
     }
 }

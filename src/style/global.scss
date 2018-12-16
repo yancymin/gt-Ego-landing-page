@@ -8,7 +8,7 @@ $dark: #0D1424;
 $textColor-1: #1B2638;
 $textColor-2: #798392;
 // ---------------transition---------------
-$normalTs : all 0.3s ease;
+$normalTs: all 0.3s ease;
 // ---------------font---------------- 
 @mixin h1($fontSize, $lineHeight) {
     color: $textColor-1;
@@ -67,4 +67,73 @@ body {
     display: flex;
     flex-direction: column;
     background: #fff;
+}
+
+button {
+    width: 426px;
+    position: relative;
+    background: #0D1425;
+    border: 0;
+    padding: 18px 42px;
+    border-radius: 6px;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    font-weight: 400;
+    font-size: 16px;
+    color: #ADBCD4;
+    letter-spacing: 0.2em;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease;
+}
+
+button:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -200%;
+    width: 200%;
+    height: 100%;
+    transform: skewX(-20deg);
+    background-image: linear-gradient(to right, transparent, rgba(142, 190, 253, 0.2), transparent);
+}
+
+button:hover:after {
+    animation: shine 1.6s ease;
+}
+
+button:active {
+    transform: translateY(1px);
+    box-shadow: 0 4px 16px #0D1425;
+}
+
+.cntr {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@-moz-keyframes shine {
+    100% {
+        left: 200%;
+    }
+}
+
+@-webkit-keyframes shine {
+    100% {
+        left: 200%;
+    }
+}
+
+@-o-keyframes shine {
+    100% {
+        left: 200%;
+    }
+}
+
+@keyframes shine {
+    100% {
+        left: 200%;
+    }
 }
