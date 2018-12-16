@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <router-view/>
+    <router-view />
   </div>
 </template>
 
@@ -13,10 +13,11 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: left;
   color: $textColor-1;
+  overflow: hidden;
 }
 
 ::selection {
-    background: $borderColor;
-    color: #fff;
+  background: $borderColor;
+  color: #fff;
 }
 </style>

@@ -58,22 +58,30 @@
                 }
             }
         }
-        #hero-wrap {
-            position: absolute !important;
+        #app-overflow {
+            width: 45%;
             top: 0;
             right: 0;
-            z-index: 0;
-            background: none;
-
-            #main-v {
+            left: 25%;
+            overflow: hidden;
+            height: 100vh;
+            position: absolute;
+            #hero-wrap {
+                width: 100%;
+                // position: absolute !important;
+                // top: 0;
+                // right: 0;
                 z-index: 0;
-                position: relative;
-                left: 0;
                 background: none;
-                overflow: visible;
-
-                .unshow {
-                   opacity: 0;
+                #main-v {
+                    left: 66.67%;
+                    z-index: 0;
+                    position: relative;
+                    background: none;
+                    overflow: visible;
+                    .unshow {
+                        opacity: 0;
+                    }
                 }
             }
         }
@@ -109,7 +117,6 @@
                 background: $main-color;
                 overflow: hidden;
             }
-            
             section {
                 display: flex;
                 flex-direction: row-reverse;
@@ -384,6 +391,41 @@
             }
             section {
                 margin-bottom: 160px;
+                position: relative;
+                .effect-app {
+                    width: 50%;
+                    position: absolute;
+                    right: -60px;
+                    top: 0;
+                    .app {
+                        opacity: 0;
+                        position: absolute;
+                        transform: rotateX(9deg) rotateZ(9deg) rotateY(-18deg);
+                        &:nth-of-type(1) {
+                            z-index: 100;
+                            width: 100%;
+                        }
+                        &:nth-of-type(2) {
+                            z-index: 50;
+                            ;
+                            width: 90%;
+                            left: 150px;
+                        }
+                        &:nth-of-type(3) {
+                            width: 80%;
+                            left: 300px;
+                        }
+                    }
+                    img {
+                        width: 40%;
+                        padding: 14px;
+                        background-color: #fff;
+                        border-radius: 2rem;
+                        box-shadow: 3px 10px 40px rgba(87, 99, 124, 0.377);
+                        border-image: linear-gradient(to bottom, transparent, #fff 40%, #fff 60%, transparent) 1;
+                        ;
+                    }
+                }
                 span {
                     text-align: center;
                     font-size: 18px;
@@ -531,6 +573,53 @@
                     transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
                 }
             }
+            .effect {
+                .effect-app {
+                    .app {
+                        .effect-img {
+                            background-color: #283548;
+                            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.4), 3px 10px 40px #0D1425;
+                        }
+                        animation: appShow 1s ease forwards;
+                        &:nth-of-type(2) {
+                            animation-delay: 0.2s;
+                        }
+                        &:nth-of-type(3) {
+                            animation-delay: 0.4s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @keyframes appShow {
+        0% {
+            opacity: 0;
+            transform: translateX(-20px) rotateX(9deg) rotateZ(9deg) rotateY(-18deg);
+        }
+        30% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 1;
+            transform: rotateX(9deg) rotateZ(9deg) rotateY(-18deg);
+        }
+    }
+}
+
+.main-white-motion {
+    .secondary {
+        .section-wrap {
+            .effect {
+                .effect-app {
+                    .app {
+                        opacity: 0;
+                    }
+                }
+            }
         }
     }
 }
@@ -553,11 +642,13 @@
         transform-origin: -10% -3%;
     }
 }
+
 @media (max-width: 1600px) {
     #hero-section {
         transform-origin: 20% -3%;
     }
 }
+
 @media (max-width: 1280px) {
     #hero-section {
         transform-origin: 50% -3%;

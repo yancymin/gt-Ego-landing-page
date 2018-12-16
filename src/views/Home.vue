@@ -40,9 +40,7 @@
             <section id="hero-section">
               <div class="container">
                 <div class="space"></div>
-                <div class="space"></div><a
-                  class="iphonex"
-                >
+                <div class="space"></div><a class="iphonex">
                   <img src="../assets/1.jpg"></a>
               </div>
               <div class="container">
@@ -57,27 +55,30 @@
             </section>
           </main>
         </div>
-        <div class="hero-wrap" id="hero-wrap">
-                              <main id="main-v">
-            <section id="hero-section">
-              <div class="container">
-                <div class="space"></div>
-                <div class="space"></div><a
-                  class="iphonex unshow"
-                >
-                  <img src=""></a>
-              </div>
-              <div class="container">
-                <div class="space"></div><a class="iphonex unshow">
-                  <img src=""></a><a class="iphonex unshow">
-                  <img src=""></a>
-              </div>
-              <div class="container"><a class="iphonex unshow">
-                  <img src=""></a><a class="iphonex">
-                  <img src="../assets/5.jpg"></a>
-              </div>
-            </section>
-          </main>
+        <div id="app-overflow">
+          <div
+            class="hero-wrap"
+            id="hero-wrap"
+          >
+            <main id="main-v">
+              <section id="hero-section">
+                <div class="container">
+                  <div class="space"></div>
+                  <div class="space"></div><a class="iphonex unshow">
+                    <img src=""></a>
+                </div>
+                <div class="container">
+                  <div class="space"></div><a class="iphonex unshow">
+                    <img src=""></a><a class="iphonex unshow">
+                    <img src=""></a>
+                </div>
+                <div class="container"><a class="iphonex unshow">
+                    <img src=""></a><a class="iphonex">
+                    <img src="../assets/5.jpg"></a>
+                </div>
+              </section>
+            </main>
+          </div>
         </div>
         <mouse />
       </div>
@@ -122,6 +123,30 @@
             <h2 id="animate2">Ego 帮助满足用户隐私保护的要求和企业 KYC 需求</h2>
             <p>用户可以在 Ego 应用程序选择不同的认证方进行多类型的身份信息认证，所有经认证的身份信息只会保存在本地，任何第三方未获得用户授权都无法获得该信息，保证您的信息不被泄露。
               <br><br>企业用户可以选择不同的身份信息，在获得用户的许可后即可或者经过认证的各类身份信息，满足您的 KYC 需求。</p>
+
+            <div class="effect-app">
+              <div class="app">
+                <img
+                  class="effect-img"
+                  src="../assets/1.jpg"
+                  alt=""
+                >
+              </div>
+              <div class="app">
+                <img
+                  class="effect-img"
+                  src="../assets/2.jpg"
+                  alt=""
+                >
+              </div>
+              <div class="app">
+                <img
+                  class="effect-img"
+                  src="../assets/5.jpg"
+                  alt=""
+                >
+              </div>
+            </div>
           </section>
           <section class="scene">
             <span>可复用的 KYC</span>
@@ -298,9 +323,11 @@ export default {
     let scroller = window.addEventListener("scroll", function() {
       if (offset - window.scrollY <= 0) {
         secondary.classList.add("main-dark");
+        secondary.classList.remove("main-white-motion");
       }
       if (offset - window.scrollY > 0) {
         secondary.classList.remove("main-dark");
+        secondary.classList.add("main-white-motion");
       }
     });
   }
