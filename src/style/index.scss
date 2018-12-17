@@ -16,6 +16,7 @@
             display: flex;
             justify-content: center;
             section {
+                z-index: 1000;
                 display: flex;
                 justify-content: center;
                 flex-direction: column;
@@ -39,7 +40,6 @@
                     @include h1(46px, 46px);
                     animation: headerShow 0.8s ease forwards;
                     animation-delay: 0.3s;
-
                 }
                 p {
                     opacity: 0;
@@ -56,19 +56,31 @@
                     animation: headerShow 0.8s ease forwards;
                     animation-delay: 0.9s;
                     li {
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        width: 178px;
-                        height: 62px;
-                        border: 1px solid $borderColor;
-                        border-radius: 6px;
+                        a {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            height: 62px;
+                            border: 1px solid $borderColor;
+                            border-radius: 6px;
+                            padding: 0 20px;
+                            background-color: #fff;
+                            transition: $normalTs;
+
+                            &:hover {
+                                border-color: #fff;
+                                box-shadow: 0 6px 30px rgba(186, 193, 206, 0.7);
+                            }
+
+                            &:active {
+                                transform: scale(0.98);
+                            }
+                        }
                         &:first-child {
                             margin-right: 14px;
                         }
                     }
                 }
-
                 @keyframes headerShow {
                     0% {
                         opacity: 0;
@@ -198,7 +210,7 @@
                     background-color: $blue;
                     position: relative;
                     top: 20px;
-                    left: 48px;
+                    left: 100px;
                     border-radius: 3px 3px 0 0;
                 }
             }
@@ -223,9 +235,12 @@
                     width: 588px;
                     background-color: #f0f4fa;
                     .card-content {
+                        display: flex;
+                        align-items: center;
+                        flex-direction: column;
                         img {
-                            width: 120px;
-                            height: 120px;
+                            width: 160px;
+                            height: 160px;
                             margin-bottom: 36px;
                         }
                         h3 {
@@ -233,8 +248,9 @@
                             @include h3(24px, 24px);
                         }
                         p {
-                            width: 400px;
+                            width: 370px;
                             @include p(16px, 26px);
+                            text-align: justify;
                         }
                     }
                 }
@@ -499,7 +515,7 @@
                         display: inline;
                         text-align: right;
                         &::before {
-                            left: 107px;
+                            left: 87px;
                         }
                     }
                     h2 {
@@ -599,16 +615,32 @@
 
 .main-dark {
     background-color: #1b2638;
+    .primary {
+        section {
+            .card-wrap {
+                .card {
+                    background-color: #283548;
+                    transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+                    .card-content {
+                        h3 {
+                            color: #B8C7E0;
+                            transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+                        }
+                    }
+                }
+            }
+        }
+    }
     .secondary {
         transition: $normalTs;
         .section-wrap {
             section {
                 h2 {
-                    color: #b8c7e0 !important; // transition: $normalTs;
+                    color: #b8c7e0 !important;
                     transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
                 }
                 p {
-                    color: $textColor-2 !important; // transition: $normalTs;
+                    color: $textColor-2 !important;
                     transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
                 }
             }

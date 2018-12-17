@@ -21,13 +21,14 @@
             <p>Ego 是新一代去中心化的用户身份解决方案。我们提供多类型的身份验证，并将身份信息认证记录上传到区块链。用户通过 Ego 可以安全便捷的使用其它第三方的相关服务，而无需反复注册账号或者认证身份信息。</p>
             <ul>
               <li>
-                <a href="">
+                <a href="https://ego.me">
                   <img
                     src="../assets/ios.svg"
                     alt=""
-                  ></a> </li>
+                  >
+                </a> </li>
               <li>
-                <a href=""><img
+                <a href="https://ego.me"><img
                     src="../assets/android.svg"
                     alt=""
                   >
@@ -84,12 +85,12 @@
       </div>
       <div class="primary">
         <section>
-          <span>传统劣势</span>
+          <span>中心化系统的固有劣势</span>
           <h2 id="h2">中心化的身份系统既不利于保护隐私又消耗大量认证成本</h2>
           <div class="card-wrap">
             <div class="card">
               <div class="card-content"><img
-                  src="../assets/card-1.png"
+                  src="../assets/card-1.svg"
                   alt=""
                 >
                 <h3>信息滥用</h3>
@@ -102,7 +103,7 @@
             >
               <div class="card-content">
                 <img
-                  src="../assets/card-2.png"
+                  src="../assets/card-2.svg"
                   alt=""
                 >
                 <h3>风控需求</h3>
@@ -119,7 +120,7 @@
       >
         <div class="section-wrap">
           <section class="effect">
-            <span>中心化系统的固有劣势</span>
+            <span>可复用的 KYC</span>
             <h2 id="animate2">Ego 帮助满足用户隐私保护的要求和企业 KYC 需求</h2>
             <p>用户可以在 Ego 应用程序选择不同的认证方进行多类型的身份信息认证，所有经认证的身份信息只会保存在本地，任何第三方未获得用户授权都无法获得该信息，保证您的信息不被泄露。
               <br><br>企业用户可以选择不同的身份信息，在获得用户的许可后即可或者经过认证的各类身份信息，满足您的 KYC 需求。</p>
@@ -149,7 +150,7 @@
             </div>
           </section>
           <section class="scene">
-            <span>可复用的 KYC</span>
+            <span>多场景通用</span>
             <h2>打造网络通用身份，助您享受互联网生活</h2>
             <div class="pic-flow">
               <div class="column">
@@ -270,16 +271,34 @@
             </div>
           </section>
           <section class="contact">
-            <span>多场景通用</span>
+            <span>与我们联系</span>
             <h2>Ego 邀请更多企业和我们一起完善身份安全生态</h2>
             <p>获取更私密安全的 KYC 服务，请留下您的联系方式，我们会尽快与您联系。</p>
             <div class="form-wrap">
-              <textField tittle="姓名" placeholder="请输入姓名"/>
-              <textField tittle="公司名称" placeholder="请输入公司名称"/>
-              <textField tittle="职位" placeholder="请输入职位"/>
-              <textField tittle="工作邮箱" placeholder="请输入工作邮箱"/>
-              <textField tittle="手机号码" placeholder="请输入手机号码"/>
-              <textField tittle="需求" placeholder="请描述您想要获得什么样的服务"/>
+              <textField
+                tittle="姓名"
+                placeholder="请输入姓名"
+              />
+              <textField
+                tittle="公司名称"
+                placeholder="请输入公司名称"
+              />
+              <textField
+                tittle="职位"
+                placeholder="请输入职位"
+              />
+              <textField
+                tittle="工作邮箱"
+                placeholder="请输入工作邮箱"
+              />
+              <textField
+                tittle="手机号码"
+                placeholder="请输入手机号码"
+              />
+              <textField
+                tittle="需求"
+                placeholder="请描述您想要获得什么样的服务"
+              />
               <button>提交</button>
             </div>
           </section>
@@ -330,7 +349,7 @@ export default {
     let secondary = document.querySelector("#main");
     let card2 = document.querySelector("#card2");
     let h2 = document.querySelector("#h2");
-    let offset = card2.offsetTop + card2.offsetHeight;
+    let offset = card2.offsetTop + (card2.offsetHeight - 200);
     let offset2 = h2.offsetTop + h2.offsetHeight;
 
     let scroller = window.addEventListener("scroll", function() {

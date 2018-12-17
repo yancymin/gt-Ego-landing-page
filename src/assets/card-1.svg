@@ -1,0 +1,101 @@
+<svg width="160px" height="160px" viewBox="0 0 160 160" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <circle id="path-1" cx="80" cy="80" r="80"></circle>
+        <rect id="path-3" x="0" y="0" width="80" height="108.8" rx="4"></rect>
+        <circle id="path-5" cx="29.2" cy="29.2" r="29.2"></circle>
+        <rect id="path-7" x="0" y="0" width="80" height="108.8" rx="4"></rect>
+        <circle id="path-9" cx="29.2" cy="29.2" r="29.2"></circle>
+        <rect id="path-11" x="0" y="0" width="80" height="108.8" rx="4"></rect>
+        <circle id="path-13" cx="29.2" cy="29.2" r="29.2"></circle>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="index-copy" transform="translate(-344.000000, -1200.000000)">
+            <g id="Group-3-Copy-4" transform="translate(344.000000, 1200.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Oval" fill="#FFFFFF" fill-rule="nonzero" xlink:href="#path-1"></use>
+                <g id="Group-4" mask="url(#mask-2)">
+                    <g transform="translate(16.000000, 31.200000)">
+                        <g id="Group-3-Copy-3" opacity="0.100000001" transform="translate(0.000000, 36.000000)">
+                            <g id="Rectangle-2">
+                                <mask id="mask-4" fill="white">
+                                    <use xlink:href="#path-3"></use>
+                                </mask>
+                                <use id="Rectangle" fill="#4C9AFF" fill-rule="nonzero" xlink:href="#path-3"></use>
+                                <g id="Group-2" mask="url(#mask-4)">
+                                    <g transform="translate(28.000000, -8.000000)">
+                                        <g id="Group" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <mask id="mask-6" fill="white">
+                                                <use xlink:href="#path-5"></use>
+                                            </mask>
+                                            <g id="Oval-Copy-3" fill-rule="nonzero"></g>
+                                            <circle id="Oval-Copy-2" fill="#FFFFFF" fill-rule="nonzero" mask="url(#mask-6)" cx="29.2" cy="57.1117647" r="12.8823529"></circle>
+                                        </g>
+                                        <circle id="Oval" fill="#FFFFFF" fill-rule="nonzero" cx="29.2" cy="33.2" r="6.8"></circle>
+                                    </g>
+                                </g>
+                            </g>
+                            <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" opacity="0.400000006" x="10.4" y="20.8" width="24" height="10.4" rx="0.8"></rect>
+                            <rect id="Rectangle-Copy" fill="#FFFFFF" fill-rule="nonzero" opacity="0.400000006" x="10.4" y="35.2" width="24" height="10.4" rx="0.8"></rect>
+                            <rect id="Rectangle-Copy-2" fill="#FFFFFF" fill-rule="nonzero" opacity="0.400000006" x="10.4" y="62.4" width="60.8" height="4.8" rx="0.8"></rect>
+                            <rect id="Rectangle-Copy-3" fill="#FFFFFF" fill-rule="nonzero" opacity="0.400000006" x="10.4" y="71.2" width="60.8" height="4.8" rx="0.8"></rect>
+                            <path d="M11.2,80 L45.6,80 C46.0418278,80 46.4,80.3581722 46.4,80.8 L46.4,84 C46.4,84.4418278 46.0418278,84.8 45.6,84.8 L11.2,84.8 C10.7581722,84.8 10.4,84.4418278 10.4,84 L10.4,80.8 C10.4,80.3581722 10.7581722,80 11.2,80 Z" id="Rectangle-Copy-4" fill="#FFFFFF" fill-rule="nonzero" opacity="0.400000006"></path>
+                        </g>
+                        <g id="Group-3-Copy-2" opacity="0.300000012" transform="translate(12.800000, 20.000000)">
+                            <g id="Rectangle-2">
+                                <mask id="mask-8" fill="white">
+                                    <use xlink:href="#path-7"></use>
+                                </mask>
+                                <use id="Rectangle" fill="#4C9AFF" fill-rule="nonzero" xlink:href="#path-7"></use>
+                                <g id="Group-2" mask="url(#mask-8)">
+                                    <g transform="translate(28.000000, -8.000000)">
+                                        <g id="Group" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <mask id="mask-10" fill="white">
+                                                <use xlink:href="#path-9"></use>
+                                            </mask>
+                                            <g id="Oval-Copy-3" fill-rule="nonzero"></g>
+                                            <circle id="Oval-Copy-2" fill="#FFFFFF" fill-rule="nonzero" mask="url(#mask-10)" cx="29.2" cy="57.1117647" r="12.8823529"></circle>
+                                        </g>
+                                        <circle id="Oval" fill="#FFFFFF" fill-rule="nonzero" cx="29.2" cy="33.2" r="6.8"></circle>
+                                    </g>
+                                </g>
+                            </g>
+                            <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" opacity="0.400000006" x="10.4" y="20.8" width="24" height="10.4" rx="0.8"></rect>
+                            <rect id="Rectangle-Copy" fill="#FFFFFF" fill-rule="nonzero" opacity="0.400000006" x="10.4" y="35.2" width="24" height="10.4" rx="0.8"></rect>
+                            <rect id="Rectangle-Copy-2" fill="#FFFFFF" fill-rule="nonzero" opacity="0.400000006" x="10.4" y="62.4" width="60.8" height="4.8" rx="0.8"></rect>
+                            <rect id="Rectangle-Copy-3" fill="#FFFFFF" fill-rule="nonzero" opacity="0.400000006" x="10.4" y="71.2" width="60.8" height="4.8" rx="0.8"></rect>
+                            <path d="M11.2,80 L45.6,80 C46.0418278,80 46.4,80.3581722 46.4,80.8 L46.4,84 C46.4,84.4418278 46.0418278,84.8 45.6,84.8 L11.2,84.8 C10.7581722,84.8 10.4,84.4418278 10.4,84 L10.4,80.8 C10.4,80.3581722 10.7581722,80 11.2,80 Z" id="Rectangle-Copy-4" fill="#FFFFFF" fill-rule="nonzero" opacity="0.400000006"></path>
+                        </g>
+                        <g id="Group-3-Copy" transform="translate(64.781739, 59.437507) rotate(8.000000) translate(-64.781739, -59.437507) translate(24.781739, 5.037507)">
+                            <g id="Rectangle-2">
+                                <mask id="mask-12" fill="white">
+                                    <use xlink:href="#path-11"></use>
+                                </mask>
+                                <use id="Rectangle" fill="#4C9AFF" fill-rule="nonzero" xlink:href="#path-11"></use>
+                                <g id="Group-2" mask="url(#mask-12)">
+                                    <g transform="translate(28.000000, -8.000000)">
+                                        <g id="Group" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <mask id="mask-14" fill="white">
+                                                <use xlink:href="#path-13"></use>
+                                            </mask>
+                                            <g id="Oval-Copy-3" fill-rule="nonzero"></g>
+                                            <circle id="Oval-Copy-2" fill="#FFFFFF" fill-rule="nonzero" mask="url(#mask-14)" cx="29.2" cy="57.1117647" r="12.8823529"></circle>
+                                        </g>
+                                        <circle id="Oval" fill="#FFFFFF" fill-rule="nonzero" cx="29.2" cy="33.2" r="6.8"></circle>
+                                    </g>
+                                </g>
+                            </g>
+                            <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" opacity="0.400000006" x="10.4" y="20.8" width="24" height="10.4" rx="0.8"></rect>
+                            <rect id="Rectangle-Copy" fill="#FFFFFF" fill-rule="nonzero" opacity="0.400000006" x="10.4" y="35.2" width="24" height="10.4" rx="0.8"></rect>
+                            <rect id="Rectangle-Copy-2" fill="#FFFFFF" fill-rule="nonzero" opacity="0.400000006" x="10.4" y="62.4" width="60.8" height="4.8" rx="0.8"></rect>
+                            <rect id="Rectangle-Copy-3" fill="#FFFFFF" fill-rule="nonzero" opacity="0.400000006" x="10.4" y="71.2" width="60.8" height="4.8" rx="0.8"></rect>
+                            <path d="M11.2,80 L45.6,80 C46.0418278,80 46.4,80.3581722 46.4,80.8 L46.4,84 C46.4,84.4418278 46.0418278,84.8 45.6,84.8 L11.2,84.8 C10.7581722,84.8 10.4,84.4418278 10.4,84 L10.4,80.8 C10.4,80.3581722 10.7581722,80 11.2,80 Z" id="Rectangle-Copy-4" fill="#FFFFFF" fill-rule="nonzero" opacity="0.400000006"></path>
+                        </g>
+                    </g>
+                </g>
+                <path d="M103.51624,23.2514544 C104.367619,22.9488906 106.597378,22.3698611 107.364822,22.1154604 C111.524888,20.7364368 112.534414,21.8246968 114.31387,21.8246968 C116.657416,21.8246968 121.15483,23.4891706 126.326158,24.8496795 C131.25999,26.1477064 136.041673,26.7675298 138.800148,27.9384328 C142.588349,29.3427268 142.668442,30.496082 146.567607,36.3804604 C148.047854,38.6143575 153.748874,49.8185456 156.361956,52.668912 C163.414872,60.362275 164.153708,61.6144478 165.879539,63.0967124 C168.169041,65.063097 165.552467,70.4887432 158.029818,79.3736509 C150.164595,74.2171815 145.087217,71.1530225 142.797686,70.181174 C139.363389,68.7234013 125.449748,66.4979987 121.959138,57.179699 C120.853641,54.2285405 118.625491,51.6574709 113.917195,47.3215248 C112.63933,46.1447183 109.883532,42.9771691 109.385689,41.5494836 C108.887847,40.121798 107.842731,37.8662369 110.1637,36.3450294 C111.711013,35.330891 113.302792,35.6878887 114.93904,37.4160226 C121.95258,42.2494777 126.450587,44.9578299 128.433061,45.5410791 C128.972987,44.6613568 129.359568,43.9908269 129.777826,43.2940464 C130.723622,41.3134813 129.336327,38.9118964 128.735088,38.4783164 C128.070583,38.0351645 127.912502,37.9338523 127.103645,37.4396257 C123.196028,35.1095717 119.973292,33.1516906 116.014864,30.7752529 C111.86271,28.2948849 110.690736,27.5465051 103.51624,23.2514544 Z" id="Path-6" fill="#1B2637" fill-rule="nonzero" mask="url(#mask-2)" transform="translate(135.098552, 50.395274) rotate(-23.000000) translate(-135.098552, -50.395274) "></path>
+            </g>
+        </g>
+    </g>
+</svg>
