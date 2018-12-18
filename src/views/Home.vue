@@ -1,16 +1,9 @@
 <template>
   <div class="home">
-    <div
-      class="main"
-      id="main"
-    >
-      <div
-        class="nav"
-        id="nav"
-      >
+    <div class="main" id="main">
+      <div class="nav" id="nav">
         <div class="nav_wrap">
           <div class="nav-logo">
-
             <svg
               width="84px"
               height="30px"
@@ -20,72 +13,27 @@
               xmlns:xlink="http://www.w3.org/1999/xlink"
             >
               <defs>
-                <linearGradient
-                  x1="50%"
-                  y1="0%"
-                  x2="50%"
-                  y2="100%"
-                  id="linearGradient-1"
-                >
-                  <stop
-                    stop-color="#53B1FF"
-                    offset="0%"
-                  ></stop>
-                  <stop
-                    stop-color="#2979FF"
-                    offset="100%"
-                  ></stop>
+                <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+                  <stop stop-color="#53B1FF" offset="0%"></stop>
+                  <stop stop-color="#2979FF" offset="100%"></stop>
                 </linearGradient>
-                <linearGradient
-                  x1="50%"
-                  y1="0%"
-                  x2="50%"
-                  y2="100%"
-                  id="linearGradient-2"
-                >
-                  <stop
-                    stop-color="#74E4FF"
-                    offset="0%"
-                  ></stop>
-                  <stop
-                    stop-color="#40C4FF"
-                    offset="100%"
-                  ></stop>
+                <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-2">
+                  <stop stop-color="#74E4FF" offset="0%"></stop>
+                  <stop stop-color="#40C4FF" offset="100%"></stop>
                 </linearGradient>
               </defs>
-              <g
-                id="Page-1"
-                stroke="none"
-                stroke-width="1"
-                fill="none"
-                fill-rule="evenodd"
-              >
-                <g
-                  id="文档中心"
-                  transform="translate(-25.000000, -15.000000)"
-                >
-                  <g
-                    id="logo"
-                    transform="translate(20.000000, 11.000000)"
-                  >
+              <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="文档中心" transform="translate(-25.000000, -15.000000)">
+                  <g id="logo" transform="translate(20.000000, 11.000000)">
                     <g fill-rule="nonzero">
                       <g id="分组-3">
-                        <rect
-                          id="矩形"
-                          x="3.916"
-                          y="3.91111111"
-                          width="31.328"
-                          height="31.2888889"
-                        ></rect>
+                        <rect id="矩形" x="3.916" y="3.91111111" width="31.328" height="31.2888889"></rect>
                       </g>
                       <g
                         id="分组-2"
                         transform="translate(19.639329, 20.483783) rotate(-45.000000) translate(-19.639329, -20.483783) translate(5.639329, 7.983783)"
                       >
-                        <g
-                          id="分组"
-                          transform="translate(-0.000000, 0.000000)"
-                        >
+                        <g id="分组" transform="translate(-0.000000, 0.000000)">
                           <path
                             d="M24.475,3.91111111 L12.2271111,3.91111111 C7.63701119,3.91111111 3.916,7.6321223 3.916,12.2222222 C3.916,16.8123221 7.63701119,20.5333333 12.2271111,20.5333333 L24.475,20.5333333 L24.475,24.4444444 L12.2222222,24.4444444 C5.47207528,24.4444444 8.26654585e-16,18.9723692 0,12.2222222 C-8.26654585e-16,5.47207528 5.47207528,-5.36374962e-16 12.2222222,-1.77635684e-15 L24.475,0 L24.475,3.91111111 Z"
                             id="合并形状"
@@ -130,44 +78,44 @@
           </div>
           <div class="right-links">
             <ul>
-              <li><a href="">产品与服务</a></li>
-              <li><a href="">文档中心</a></li>
+              <li>
+                <a href>产品与服务</a>
+              </li>
+              <li>
+                <a href>文档中心</a>
+              </li>
               <li></li>
-              <li><a href="">登录</a></li>
-              <li><a href="">加入我们</a></li>
+              <li>
+                <a href>登录</a>
+              </li>
+              <li>
+                <a href>加入我们</a>
+              </li>
             </ul>
           </div>
         </div>
       </div>
-      <div class="header">
+
+      <div class="header" id="wrapper">
         <div class="section-wrap">
           <section>
             <div class="logo">
-              <img
-                src="../assets/logo.svg"
-                alt=""
-              >
-              <img
-                src="../assets/logo_text.svg"
-                alt=""
-              >
+              <img src="../assets/logo.svg" alt>
+              <img src="../assets/logo_text.svg" alt>
             </div>
             <h1>区块链身份安全平台</h1>
             <p>Ego 是新一代去中心化的用户身份解决方案。我们提供多类型的身份验证，并将身份信息认证记录上传到区块链。用户通过 Ego 可以安全便捷的使用其它第三方的相关服务，而无需反复注册账号或者认证身份信息。</p>
             <ul>
               <li>
                 <a href="https://ego.me">
-                  <img
-                    src="../assets/ios.svg"
-                    alt=""
-                  >
-                </a> </li>
+                  <img src="../assets/ios.svg" alt>
+                </a>
+              </li>
               <li>
-                <a href="https://ego.me"><img
-                    src="../assets/android.svg"
-                    alt=""
-                  >
-                </a></li>
+                <a href="https://ego.me">
+                  <img src="../assets/android.svg" alt>
+                </a>
+              </li>
             </ul>
           </section>
         </div>
@@ -176,71 +124,50 @@
             <section id="hero-section">
               <div class="container">
                 <div class="space"></div>
-                <div class="space"></div><a class="iphonex">
-                  <img src="../assets/3.jpg"></a>
+                <div class="space"></div>
+                <a class="iphonex">
+                  <img src="../assets/3.jpg">
+                </a>
               </div>
               <div class="container">
-                <div class="space"></div><a class="iphonex">
-                  <img src="../assets/5.jpg"></a><a class="iphonex">
-                  <img src="../assets/2.jpg"></a>
+                <div class="space"></div>
+                <a class="iphonex">
+                  <img src="../assets/5.jpg">
+                </a>
+                <a class="iphonex">
+                  <img src="../assets/2.jpg">
+                </a>
               </div>
-              <div class="container"><a class="iphonex">
-                  <img src="../assets/4.jpg"></a><a class="iphonex">
-                  <img src="../assets/1.jpg"></a>
+              <div class="container">
+                <a class="iphonex">
+                  <img src="../assets/4.jpg">
+                </a>
+                <a class="iphonex">
+                  <img src="../assets/1.jpg">
+                </a>
               </div>
             </section>
           </main>
         </div>
-        <div id="app-overflow">
-          <div
-            class="hero-wrap"
-            id="hero-wrap"
-          >
-            <main id="main-v">
-              <section id="hero-section">
-                <div class="container">
-                  <div class="space"></div>
-                  <div class="space"></div><a class="iphonex unshow">
-                    <img src=""></a>
-                </div>
-                <div class="container">
-                  <div class="space"></div><a class="iphonex unshow">
-                    <img src=""></a><a class="iphonex unshow">
-                    <img src=""></a>
-                </div>
-                <div class="container"><a class="iphonex unshow">
-                    <img src=""></a><a class="iphonex">
-                    <img src="../assets/1.jpg"></a>
-                </div>
-              </section>
-            </main>
-          </div>
-        </div>
-        <mouse />
+
+        <mouse/>
       </div>
+
       <div class="primary">
         <section>
           <span>中心化系统的固有劣势</span>
           <h2 id="h2">中心化的身份系统既不利于保护隐私又消耗大量认证成本</h2>
           <div class="card-wrap">
             <div class="card">
-              <div class="card-content"><img
-                  src="../assets/card-1.svg"
-                  alt=""
-                >
+              <div class="card-content">
+                <img src="../assets/card-1.svg" alt>
                 <h3>信息滥用</h3>
                 <p>用户在互联网世界中，提交个人的各类信息享受到各种便利的同时，也可能被滥用于后续的营销，被贩卖给灰黑产，用户被骚扰，被诈骗等问题层出不穷。</p>
               </div>
             </div>
-            <div
-              class="card"
-              id="card2"
-            >
+            <div class="card" id="card2">
               <div class="card-content">
-                <img
-                  src="../assets/card-2.svg"
-                  alt=""
-                >
+                <img src="../assets/card-2.svg" alt>
                 <h3>风控需求</h3>
                 <p>企业处于风控的需求，被迫对用户的信息做充分的认证，在此花费了大量的 KYC、AML 等成本，来防止提交了虚假信息的用户的“薅羊毛”等行为。</p>
               </div>
@@ -249,38 +176,25 @@
         </section>
       </div>
 
-      <div
-        class="secondary"
-        id="secondary"
-      >
+      <div class="secondary" id="secondary">
         <div class="section-wrap">
           <section class="effect">
             <span>可复用的 KYC</span>
             <h2 id="animate2">Ego 帮助满足用户隐私保护的要求和企业 KYC 需求</h2>
             <p>用户可以在 Ego 应用程序选择不同的认证方进行多类型的身份信息认证，所有经认证的身份信息只会保存在本地，任何第三方未获得用户授权都无法获得该信息，保证您的信息不被泄露。
-              <br><br>企业用户可以选择不同的身份信息，在获得用户的许可后即可或者经过认证的各类身份信息，满足您的 KYC 需求。</p>
+              <br>
+              <br>企业用户可以选择不同的身份信息，在获得用户的许可后即可或者经过认证的各类身份信息，满足您的 KYC 需求。
+            </p>
 
             <div class="effect-app">
               <div class="app">
-                <img
-                  class="effect-img"
-                  src="../assets/1.jpg"
-                  alt=""
-                >
+                <img class="effect-img" src="../assets/1.jpg" alt>
               </div>
               <div class="app">
-                <img
-                  class="effect-img"
-                  src="../assets/2.jpg"
-                  alt=""
-                >
+                <img class="effect-img" src="../assets/2.jpg" alt>
               </div>
               <div class="app">
-                <img
-                  class="effect-img"
-                  src="../assets/5.jpg"
-                  alt=""
-                >
+                <img class="effect-img" src="../assets/5.jpg" alt>
               </div>
             </div>
           </section>
@@ -292,117 +206,73 @@
                 <div class="pic">
                   <div class="pic-info">
                     <div class="pic_info-wrap">
-                      <img
-                        src="../assets/med.svg"
-                        alt=""
-                      >
+                      <img src="../assets/med.svg" alt>
                       <p>医疗</p>
                     </div>
-                  </div><img
-                    src="../assets/med.jpg"
-                    alt=""
-                  >
+                  </div>
+                  <img src="../assets/med.jpg" alt>
                 </div>
               </div>
               <div class="column">
                 <div class="pic">
                   <div class="pic-info">
                     <div class="pic_info-wrap">
-                      <img
-                        src="../assets/finance.svg"
-                        alt=""
-                      >
+                      <img src="../assets/finance.svg" alt>
                       <p>金融</p>
                     </div>
                   </div>
-                  <img
-                    src="../assets/finance.jpg"
-                    alt=""
-                  >
+                  <img src="../assets/finance.jpg" alt>
                 </div>
                 <div class="pic pic2">
                   <div class="pic-info">
                     <div class="pic_info-wrap">
-                      <img
-                        src="../assets/social.svg"
-                        alt=""
-                      >
+                      <img src="../assets/social.svg" alt>
                       <p>社交</p>
                     </div>
-                  </div><img
-                    src="../assets/social.jpg"
-                    alt=""
-                  >
+                  </div>
+                  <img src="../assets/social.jpg" alt>
                 </div>
               </div>
               <div class="column">
                 <div class="pic">
                   <div class="pic-info">
                     <div class="pic_info-wrap">
-                      <img
-                        src="../assets/trans.svg"
-                        alt=""
-                      >
+                      <img src="../assets/trans.svg" alt>
                       <p>出行</p>
                     </div>
-                  </div><img
-                    src="../assets/trans.jpg"
-                    alt=""
-                  >
+                  </div>
+                  <img src="../assets/trans.jpg" alt>
                 </div>
               </div>
               <div class="column">
                 <div class="pic">
                   <div class="pic-info">
                     <div class="pic_info-wrap">
-                      <img
-                        src="../assets/shopping.svg"
-                        alt=""
-                      >
+                      <img src="../assets/shopping.svg" alt>
                       <p>购物</p>
                     </div>
-                  </div><img
-                    src="../assets/shop.jpg"
-                    alt=""
-                  >
+                  </div>
+                  <img src="../assets/shop.jpg" alt>
                 </div>
-
               </div>
               <div class="column">
                 <div class="pic">
                   <div class="pic-info">
                     <div class="pic_info-wrap">
-                      <img
-                        src="../assets/renting.svg"
-                        alt=""
-                      >
+                      <img src="../assets/renting.svg" alt>
                       <p>居住</p>
                     </div>
-                  </div><img
-                    src="../assets/renting.jpg"
-                    alt=""
-                  >
+                  </div>
+                  <img src="../assets/renting.jpg" alt>
                 </div>
               </div>
             </div>
 
             <div class="pic-blur">
-              <img
-                src="../assets/med.jpg"
-                alt=""
-              >
-              <img
-                src="../assets/finance.jpg"
-                alt=""
-              >
-              <img
-                src="../assets/shop.jpg"
-                alt=""
-              >
-              <img
-                src="../assets/finance.jpg"
-                alt=""
-              >
+              <img src="../assets/med.jpg" alt>
+              <img src="../assets/finance.jpg" alt>
+              <img src="../assets/shop.jpg" alt>
+              <img src="../assets/finance.jpg" alt>
             </div>
           </section>
           <section class="contact">
@@ -410,30 +280,12 @@
             <h2>Ego 邀请更多企业和我们一起完善身份安全生态</h2>
             <p>获取更私密安全的 KYC 服务，请留下您的联系方式，我们会尽快与您联系。</p>
             <div class="form-wrap">
-              <textField
-                tittle="姓名"
-                placeholder="请输入姓名"
-              />
-              <textField
-                tittle="公司名称"
-                placeholder="请输入公司名称"
-              />
-              <textField
-                tittle="职位"
-                placeholder="请输入职位"
-              />
-              <textField
-                tittle="工作邮箱"
-                placeholder="请输入工作邮箱"
-              />
-              <textField
-                tittle="手机号码"
-                placeholder="请输入手机号码"
-              />
-              <textField
-                tittle="需求"
-                placeholder="请描述您想要获得什么样的服务"
-              />
+              <textField tittle="姓名" placeholder="请输入姓名"/>
+              <textField tittle="公司名称" placeholder="请输入公司名称"/>
+              <textField tittle="职位" placeholder="请输入职位"/>
+              <textField tittle="工作邮箱" placeholder="请输入工作邮箱"/>
+              <textField tittle="手机号码" placeholder="请输入手机号码"/>
+              <textField tittle="需求" placeholder="请描述您想要获得什么样的服务"/>
               <button>提交</button>
             </div>
           </section>
@@ -443,30 +295,31 @@
       <footer>
         <div class="footer-wrap">
           <div class="copyright-info">
-            <img
-              src="../assets/footer_logo.svg"
-              alt=""
-            >
-            <p>
-              Copyright © 2018 EGO
+            <img src="../assets/footer_logo.svg" alt>
+            <p>Copyright © 2018 EGO
               <br>
-              <br>
-              武汉极意网络科技有限公司<br>
-              鄂 ICP 备 12016193 号 -1<br>
-              增值电信业务经营许可证鄂 B2-20170058
+              <br>武汉极意网络科技有限公司
+              <br>鄂 ICP 备 12016193 号 -1
+              <br>增值电信业务经营许可证鄂 B2-20170058
             </p>
           </div>
           <div class="info">
             <ul>
-              <li><a href="">服务条款</a></li>
-              <li><a href="">隐私声明</a></li>
-              <li>合作请发送邮件至 <a href="mailto:contact@egoid.me">contact@egoid.me</a></li>
+              <li>
+                <a href>服务条款</a>
+              </li>
+              <li>
+                <a href>隐私声明</a>
+              </li>
+              <li>
+                合作请发送邮件至
+                <a href="mailto:contact@egoid.me">contact@egoid.me</a>
+              </li>
             </ul>
           </div>
         </div>
       </footer>
     </div>
-
   </div>
 </template>
 
@@ -485,6 +338,7 @@ export default {
     let card2 = document.querySelector("#card2");
     let h2 = document.querySelector("#h2");
     let header = document.querySelector(".header");
+    let primary = document.querySelector(".primary");
     let nav = document.querySelector("#nav");
 
     let offset = card2.offsetTop + (card2.offsetHeight - 200);
