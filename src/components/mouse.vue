@@ -33,8 +33,6 @@ $animDuration: 5s;
     );
 }
 
-
-
 .mouse {
   @include bgGradient;
   position: relative;
@@ -42,7 +40,7 @@ $animDuration: 5s;
   height: $heightMouse;
   border-radius: 100px;
   background-size: 100% 200%;
-  animation: 
+  animation:
     colorSlide $animDuration linear infinite,
     nudgeMouse $animDuration ease-out infinite;
   &:before,
@@ -67,25 +65,25 @@ $animDuration: 5s;
   }
 }
 
-@keyframes colorSlide { 
+@keyframes colorSlide {
   0% { background-position: 0% 100%; }
   20% { background-position: 0% 0%; }
   21% { background-color: $colorOutlineFade; }
-  29.99% { 
+  29.99% {
     background-color: $colorOutline;
     background-position: 0% 0%;
   }
-  30% { 
+  30% {
     background-color: $colorOutlineFade;
     background-position: 0% 100%;
   }
   50% { background-position: 0% 0%; }
   51% { background-color: $colorOutlineFade; }
-  59% { 
+  59% {
     background-color: $colorOutline;
     background-position: 0% 0%;
   }
-  60% { 
+  60% {
     background-color: $colorOutlineFade;
     background-position: 0% 100%;
   }
@@ -99,7 +97,7 @@ $animDuration: 5s;
     opacity: 1;
     transform: scale(1) translateY(-$posTrackball);
   }
-  6% { 
+  6% {
     opacity: 1;
     transform: scale(0.9) translateY($posTrackball/4);
   }
@@ -119,7 +117,7 @@ $animDuration: 5s;
     opacity: 1;
     transform: scale(1) translateY(-$posTrackball);
   }
-  36% { 
+  36% {
     opacity: 1;
     transform: scale(0.9) translateY($posTrackball/4);
   }
@@ -139,7 +137,7 @@ $animDuration: 5s;
     opacity: 1;
     transform: scale(1) translateY(-$posTrackball);
   }
-  66% { 
+  66% {
     opacity: 1;
     transform: scale(0.9) translateY($posTrackball/4);
   }
@@ -177,7 +175,7 @@ $animDuration: 5s;
 //   90% { transform: translateY(0); }
 // }
 
-// @keyframes colorText { 
+// @keyframes colorText {
 //   21% { color: $colorOutlineFade; }
 //   30% { color: $colorOutline; }
 //   51% { color: $colorOutlineFade; }

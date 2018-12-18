@@ -18,12 +18,12 @@
 
 <script>
 export default {
-  name: "textField",
+  name: 'textField',
   props: {
     placeholder: String,
     tittle: String
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>
