@@ -107,12 +107,12 @@
             <p>Ego 是新一代去中心化的用户身份解决方案。我们提供多类型的身份验证，并将身份信息认证记录上传到区块链。用户通过 Ego 可以安全便捷的使用其它第三方的相关服务，而无需反复注册账号或者认证身份信息。</p>
             <ul>
               <li>
-                <a href="https://ego.me">
+                <a href="/">
                   <img src="../assets/ios.svg" alt>
                 </a>
               </li>
               <li>
-                <a href="https://ego.me">
+                <a href="https://download.egoid.me/app/download/ego-newest.apk">
                   <img src="../assets/android.svg" alt>
                 </a>
               </li>
@@ -125,24 +125,24 @@
               <div class="container">
                 <div class="space"></div>
                 <div class="space"></div>
-                <a class="iphonex">
+                <a class="iphonex" id="iphone-1">
                   <img src="../assets/3.jpg">
                 </a>
               </div>
               <div class="container">
                 <div class="space"></div>
-                <a class="iphonex">
+                <a class="iphonex" id="iphone-2">
                   <img src="../assets/5.jpg">
                 </a>
-                <a class="iphonex">
+                <a class="iphonex" id="iphone-3">
                   <img src="../assets/2.jpg">
                 </a>
               </div>
               <div class="container">
-                <a class="iphonex">
+                <a class="iphonex" id="iphone-4">
                   <img src="../assets/4.jpg">
                 </a>
-                <a class="iphonex">
+                <a class="iphonex" id="iphone-5">
                   <img src="../assets/1.jpg">
                 </a>
               </div>
@@ -362,8 +362,7 @@ export default {
 
       if (navOffset - window.scrollY <= 0) {
         nav.style.top = "0";
-      }
-      if (navOffset - window.scrollY > 0) {
+      } else {
         nav.style.top = "-80px";
       }
     });

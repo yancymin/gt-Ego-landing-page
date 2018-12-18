@@ -156,8 +156,17 @@
             position: relative;
             width: 45%;
             height: 100vh;
-            background-color: $bgColor;
             $main-color: #f0f4fa;
+            animation: bgShow 0.3s ease forwards;
+
+            @keyframes bgShow {
+                0% {
+                    background-color: rgba(255, 255, 255, 1);
+                }
+                100% {
+                    background-color: $bgColor;
+                }
+            }
             .iphonex {
                 img {
                     height: calc(2436px / 2);
@@ -180,8 +189,7 @@
             } // disposition
             main {
                 z-index: 1;
-                height: 100vh;
-                background: $main-color;
+                height: 100vh; // background: $main-color;
             }
             section {
                 display: flex;
@@ -211,20 +219,16 @@
             }
             .iphonex {
                 opacity: 0;
-                animation: moving 1.5s ease forwards; // margin: 3rem 12rem;
+                animation: moving 1s ease forwards; // margin: 3rem 12rem;
                 user-select: none;
-                animation-delay: 0.3s;
-                    margin: 3rem 12rem;
-
+                margin: 3rem 12rem;
             }
             @keyframes moving {
                 0% {
-                    opacity: 0;
-                    // margin: 6rem 16rem;
+                    opacity: 0; // margin: 6rem 16rem;
                 }
                 100% {
-                    opacity: 1;
-                    // margin: 3rem 12rem;
+                    opacity: 1; // margin: 3rem 12rem;
                 }
             }
         }
@@ -479,13 +483,11 @@
                 margin-bottom: 160px;
                 position: relative;
                 top: 30px;
-
                 &:first-child {
-                    p  {
+                    p {
                         margin-top: 40px;
                     }
                 }
-
                 .effect-app {
                     width: 50%;
                     position: absolute;
@@ -501,7 +503,6 @@
                         z-index: 100;
                         opacity: 1;
                         position: absolute;
-
                     }
                     img {
                         position: relative;
@@ -663,12 +664,19 @@
     }
 }
 
-#bg1, #bg2,#bg3,#bg4,#bg5 {
-    fill: #F0F4FA;
+#bg1,
+#bg2,
+#bg3,
+#bg4,
+#bg5 {
+    fill: rgba(239, 244, 250, 0.6);
 }
 
-
-#mail, #phone, #face, #id, #etc {
+#mail,
+#phone,
+#face,
+#id,
+#etc {
     fill: $textColor-2;
 }
 
@@ -676,6 +684,23 @@
     path {
         fill: #DAEAFE;
     }
+}
+
+
+#iphone-1 {
+    animation-delay: 0.6s;
+}
+#iphone-2 {
+    animation-delay: 0.8s;
+}
+#iphone-3 {
+    animation-delay: 0.65s;
+}
+#iphone-4 {
+    animation-delay: 0.7s;
+}
+#iphone-5 {
+    animation-delay: 0.6s;
 }
 
 .main-dark {
@@ -721,10 +746,18 @@
     .secondary {
         transition: $normalTs;
         .section-wrap {
-            #bg1, #bg2,#bg3,#bg4,#bg5 {
+            #bg1,
+            #bg2,
+            #bg3,
+            #bg4,
+            #bg5 {
                 fill: #243449 !important;
             }
-            #mail, #phone, #face, #id, #etc {
+            #mail,
+            #phone,
+            #face,
+            #id,
+            #etc {
                 fill: #B8C7E0 !important;
             }
             #all {
@@ -754,25 +787,20 @@
             }
         }
     }
-    
 }
 
 .main-white-motion {
     .secondary {
         .section-wrap {
-
             .effect {
                 .effect-app {
                     .app {
-                        opacity: 1;
-                        // animation: appShow 1s ease forwards;
-
+                        opacity: 1; // animation: appShow 1s ease forwards;
                     }
                 }
             }
         }
-    }
-    // @keyframes appShow {
+    } // @keyframes appShow {
     //     0% {
     //         opacity: 0;
     //         transform: translateX(-20px) rotateX(10deg) rotateZ(12deg) rotateY(-9deg);
