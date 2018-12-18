@@ -181,7 +181,8 @@
           <section class="effect">
             <span>可复用的 KYC</span>
             <h2 id="animate2">Ego 帮助满足用户隐私保护的要求和企业 KYC 需求</h2>
-               <attestation icon-name="attestation"><icon-write /></attestation>
+            <attestation />
+ 
             <p>用户可以在 Ego 应用程序选择不同的认证方进行多类型的身份信息认证，所有经认证的身份信息只会保存在本地，任何第三方未获得用户授权都无法获得该信息，保证您的信息不被泄露。
               <br>
               <br>企业用户可以选择不同的身份信息，在获得用户的许可后即可或者经过认证的各类身份信息，满足您的 KYC 需求。
@@ -192,7 +193,7 @@
                 <img class="effect-img" src="../assets/3.jpg" alt>
               </div>
               <div class="bg-dots">
-               <dots icon-name="dots"><icon-write /></dots>
+                <dots  />
               </div>
             </div>
           </section>
@@ -331,7 +332,9 @@ export default {
   name: "home",
   components: {
     mouse,
-    textField,dots,attestation
+    textField,
+    dots,
+    attestation
   },
   mounted: function() {
     let secondary = document.querySelector("#main");
@@ -349,16 +352,14 @@ export default {
       if (offset - window.scrollY <= 0) {
         secondary.classList.add("main-dark");
       } else {
-          secondary.classList.remove("main-dark");
+        secondary.classList.remove("main-dark");
       }
-
 
       if (offset2 - window.scrollY <= 0) {
         secondary.classList.add("main-white-motion");
       } else {
-           secondary.classList.remove("main-white-motion");
+        secondary.classList.remove("main-white-motion");
       }
-
 
       if (navOffset - window.scrollY <= 0) {
         nav.style.top = "0";

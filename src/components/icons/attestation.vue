@@ -1,10 +1,10 @@
 <template>
 <!-- Generator: Adobe Illustrator 21.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg xmlns="http://www.w3.org/2000/svg"
-    :width="width"
-    :height="height"
+    width="562"
+    height="44"
     viewBox="0 0 562 44"
-    :aria-labelledby="attestation"
+    aria-labelledby="attestation"
     role="presentation">
 
 
@@ -99,25 +99,3 @@
 
 </template>
 
-<script>
-    export default {
-  props: {
-    iconName: {
-      type: String,
-      default: 'box'
-    },
-    width: {
-      type: [Number, String],
-      default: 562
-    },
-    height: {
-      type: [Number, String],
-      default: 44
-    },
-    iconColor: {
-      type: String,
-      default: 'currentColor'
-    }
-  }
-}
-</script>
