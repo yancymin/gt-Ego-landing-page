@@ -110,52 +110,156 @@
                 }
             }
         }
-
         .secondary {
-            padding: 60px 0;
+            padding: 60px 0 20px 0;
             .section-wrap {
                 width: 100%;
-                    .effect {
-                        padding: 0 20px;
-                        h2 {
-                            width: 90%;
-                            @include h2;
-                            margin-bottom: 400px;
-                        }
-                        p {
-                            width: auto;
-                            margin-top: 10px;
-                            @include p;
-                        }
-
-                        .effect-app {
-                            width: 100%;
-                            right: 0;
-                            top: 140px;
-
-                            .app {
-                                img {
-                                    width: auto;
-                                    height: 300px;
-                                    right: -100px;
-                                    padding: 10px;
-                                    border-radius: 1rem;
-                                }
-
-                            }
-                            .bg-dots {
-                                top: 30px;
-                                svg {
-                                    width: 90%;
-                                }
+                .effect {
+                    padding: 0 20px;
+                    h2 {
+                        width: 90%;
+                        @include h2;
+                        margin-bottom: 400px;
+                    }
+                    p {
+                        width: auto;
+                        margin-top: 10px;
+                        @include p;
+                    }
+                    .effect-app {
+                        width: 100%;
+                        right: 0;
+                        top: 140px;
+                        .app {
+                            img {
+                                width: auto;
+                                height: 300px;
+                                right: -100px;
+                                padding: 10px;
+                                border-radius: 1rem;
                             }
                         }
-
-                        svg {
-                            width: 100%;
+                        .bg-dots {
+                            top: 30px;
+                            svg {
+                                width: 90%;
+                            }
                         }
                     }
+                    svg {
+                        width: 100%;
+                    }
+                }
+                .scene {
+                    top: -80px;
+                    padding: 0 20px;
+                    margin-bottom: 0;
+                    h2 {
+                        width: 90%;
+                        @include h2;
+                        margin-bottom: 110px;
+                    }
+                    p {
+                        width: auto;
+                        margin-top: 10px;
+                        @include p;
+                    }
+                    .pic-flow {
+                        flex-wrap: wrap;
+                        .column {
+                            width: 45%;
+                            top: 0;
+                            display: flex;
+                            justify-content: center;
+                            &:nth-of-type(1) {
+                                flex-direction: column;
+                                align-items: center;
+                            }
+                            &:nth-of-type(2) {
+                                flex-direction: column;
+                                align-items: center;
+                            }
+                            .pic {
+                                width: 160px;
+                                height: 100px;
+                                overflow: hidden;
+                                .pic_info-wrap {
+                                    display: none;
+                                }
+                                img {
+                                    width: 160px;
+                                    height: 100px;
+                                }
+                                &:hover .pic-info {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                    .pic-blur {
+                        display: none;
+                    }
+                }
+                .contact {
+                    top: -80px;
+                    padding: 0 20px;
+                    margin-bottom: 40px;
+                    h2 {
+                        width: 90%;
+                        @include h2;
+                        margin-bottom: 30px;
+                    }
+                    p {
+                        width: auto;
+                        margin-top: 10px;
+                        margin-bottom: 60px;
+                        @include p;
+                    }
+                    .form-wrap {
+                        position: relative;
+                        top: 0;
+                        .text-field {
+                            width: 100%;
+                            input {
+                                width: auto;
+                            }
+                        }
+                    }
+                    button {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    footer {
+        width: 100% !important;
+        flex-direction: column;
+        .footer-wrap {
+            width: 100% !important;
+            flex-direction: column;
+            justify-content: flex-start !important;
+            align-items: flex-start !important;
+            padding: 40px 20px 24px 20px !important;
 
+
+            .copyright-info {
+                width: 89vw !important;
+                padding-bottom: 24px;
+                margin-bottom: 24px;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+            }
+            .info {
+                width: 100% !important;
+                ul {
+                    width: 100%;
+                    justify-content: flex-start !important;
+                    flex-direction: column;
+                    li {
+                        margin: 0 0 8px 0 !important;
+                        justify-content: flex-start !important;
+                    }
+                }
             }
         }
     }
