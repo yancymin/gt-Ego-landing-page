@@ -371,5 +371,6 @@ export default {
 </script>
 
 <style lang="scss">
+@import "../style/mobile.scss";
 @import "../style/index.scss";
 </style>

@@ -1,0 +1,162 @@
+@media screen and (max-width: 425px) {
+    #main {
+        @mixin h2 {
+            font-size: 24px;
+            line-height: 32px;
+        }
+        @mixin h3 {
+            font-size: 20px;
+            line-height: 20px;
+        }
+        @mixin p {
+            font-size: 14px;
+            line-height: 21px;
+        }
+        .nav {
+            display: none;
+        }
+        .header {
+            flex-direction: column;
+            .section-wrap {
+                width: 100%;
+                order: 1;
+                height: 60%;
+                section {
+                    // position: relative;
+                    // top: -10px;
+                    padding: 0 40px;
+                }
+                .logo {
+                    margin-bottom: 12px;
+                }
+                h1 {
+                    font-size: 32px;
+                    margin-bottom: 12px;
+                }
+                p {
+                    width: auto;
+                    margin-bottom: 20px;
+                    @include p;
+                }
+                ul {
+                    li {
+                        a {
+                            height: 46px;
+                            img {
+                                width: 110%;
+                                padding: 0 12px;
+                            }
+                        }
+                    }
+                }
+            }
+            .hero-wrap {
+                order: -2;
+                position: relative;
+                width: 100%;
+                height: 40%;
+                bottom: 0;
+                right: 0;
+                overflow: hidden;
+                main {
+                    height: auto;
+                    overflow: hidden;
+                    section {
+                        transform-origin: 10% -3%;
+                        transform: scale(0.25) !important;
+                    }
+                }
+            }
+            .mouse {
+                display: none;
+            }
+        }
+        .primary {
+            width: 100%;
+            padding: 30px 0;
+            section {
+                width: 100%;
+                h2,
+                span {
+                    width: auto;
+                }
+                h2 {
+                    width: 90%;
+                    @include h2;
+                    margin-bottom: 40px;
+                }
+                .card-wrap {
+                    width: auto;
+                    flex-direction: column;
+                    align-items: center;
+                    .card {
+                        width: 100%;
+                        height: auto;
+                        padding: 40px 0;
+                        .card-content {
+                            h3 {
+                                @include h3;
+                            }
+                            p {
+                                width: auto;
+                                padding: 0 20px;
+                                @include p;
+                            }
+                        }
+                        &:last-child {
+                            margin-top: 10px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .secondary {
+            padding: 60px 0;
+            .section-wrap {
+                width: 100%;
+                    .effect {
+                        padding: 0 20px;
+                        h2 {
+                            width: 90%;
+                            @include h2;
+                            margin-bottom: 400px;
+                        }
+                        p {
+                            width: auto;
+                            margin-top: 10px;
+                            @include p;
+                        }
+
+                        .effect-app {
+                            width: 100%;
+                            right: 0;
+                            top: 140px;
+
+                            .app {
+                                img {
+                                    width: auto;
+                                    height: 300px;
+                                    right: -100px;
+                                    padding: 10px;
+                                    border-radius: 1rem;
+                                }
+
+                            }
+                            .bg-dots {
+                                top: 30px;
+                                svg {
+                                    width: 90%;
+                                }
+                            }
+                        }
+
+                        svg {
+                            width: 100%;
+                        }
+                    }
+
+            }
+        }
+    }
+}
