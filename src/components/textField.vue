@@ -1,16 +1,9 @@
 <template>
   <div class="text-field">
-    <form action="">
+    <form action>
       <div class="input-wrap">
-        <input
-          type="text"
-          :placeholder="placeholder"
-          id="textinput"
-        >
-        <label
-          for="textinput"
-          class="label"
-        >{{tittle}}</label>
+        <input type="text" :placeholder="placeholder" id="textinput">
+        <label for="textinput" class="label">{{tittle}}</label>
       </div>
     </form>
   </div>
@@ -18,12 +11,12 @@
 
 <script>
 export default {
-  name: 'textField',
+  name: "textField",
   props: {
     placeholder: String,
     tittle: String
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>
@@ -43,7 +36,7 @@ export default {
         position: relative;
         top: -75px;
         font-size: 16px;
-        color: #B8C7E0;
+        color: #b8c7e0;
         letter-spacing: 0;
         line-height: 16px;
         margin-bottom: 8px;
@@ -75,15 +68,12 @@ export default {
         }
 
         &:hover {
-          // border-color: rgba(184, 199, 224, 0.2);
-          border: 2px solid rgba(184, 199, 224, 0.2);
-          padding: 11px;
+          box-shadow: inset 0 0 0 2px rgba(184, 199, 224, 0.2);
         }
 
         &:focus {
-          border: 2px solid #357eff;
+          box-shadow: inset 0 0 0 2px #357eff;
           background-color: #0d1424;
-          padding: 11px;
 
           & ~ label {
             color: #357eff;

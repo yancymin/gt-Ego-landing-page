@@ -499,7 +499,7 @@
             section {
                 margin-bottom: 160px;
                 position: relative;
-                top: 30px;
+                top: 0;
                 &:first-child {
                     p {
                         margin-top: 40px;
@@ -643,7 +643,7 @@
                     font-size: 12px;
                     line-height: 19px;
                     color: $textColor-3;
-                    opacity: 0.4;
+                    opacity: 0.5;
                 }
             }
         }
@@ -658,7 +658,7 @@
                     justify-content: center;
                     align-items: center;
                     color: $textColor-3 !important;
-                    opacity: 0.4;
+                    opacity: 0.5;
                     @include p(12px, 12px);
                     &:last-child {
                         display: flex;
