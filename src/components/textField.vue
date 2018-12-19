@@ -43,7 +43,7 @@ export default {
         position: relative;
         top: -75px;
         font-size: 16px;
-        color: #9ab9ec;
+        color: #B8C7E0;
         letter-spacing: 0;
         line-height: 16px;
         margin-bottom: 8px;
