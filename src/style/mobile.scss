@@ -6,17 +6,17 @@
             ul {
                 li {
                     opacity: 1 !important;
-                    transition: all 0.5s ease-in !important;
-                    transform: none !important;
+                    transition: all 0.4s ease-in-out !important;
+                    transform: translateY(0) !important;
           
                     &:nth-of-type(2) {
-                        transition-delay: 0.1s !important;
+                        transition-delay: 0.06s !important;
                     }
                     &:nth-of-type(3) {
-                        transition-delay: 0.25s !important
+                        transition-delay: 0.15s !important
                     }
                     &:nth-of-type(4) {
-                        transition-delay: 0.35s !important;
+                        transition-delay: 0.24s !important;
                     }
                 }
             }
@@ -115,7 +115,7 @@
                         width: 100%;
                         padding: 20px 0;
                         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-
+                        transform: translateY(-3px);
                         a {
                             text-decoration-line: none;
                             color: #5a6371;

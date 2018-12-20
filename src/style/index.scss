@@ -29,6 +29,9 @@
                     justify-content: center;
                     align-items: center;
                     li {
+                        &:first-child {
+                            display: none;
+                        }
                         a {
                             text-decoration-line: none;
                             color: #5a6371;
@@ -124,27 +127,53 @@
                             align-items: center;
                             height: 62px;
                             border: 1px solid rgba(184, 199, 224, 0.7);
-                            ;
                             border-radius: 6px;
                             padding: 0 20px;
                             background-color: #fff;
-                            transition: all 0.2s ease-in;
-                            transition-delay: 0.05s;
-                            &:hover,
-                            &:active {
-                                background-color: #1B2638;
-                                svg {
-                                    path {
-                                        fill: #fff;
+                            transition: all 0.2s ease-in-out;
+                        }
+                        &:last-child {
+                            a {
+                                &:hover {
+                            border: 1px solid #1B2638;
+                                    background-color: #1B2638;
+                                    svg {
+                                        path {
+                                            fill: #fff;
+                                        }
                                     }
                                 }
-                            }
-                            &:active {
-                                transform: scale(0.95);
+                                &:active {
+                                    transform: scale(0.95);
+                                }
                             }
                         }
                         &:first-child {
                             margin-right: 14px;
+                            a {
+                                position: relative;
+                                &:hover::before {
+                                    opacity: 1;
+                                    transform: scale(1) translateY(0);
+                                }
+                                &::before {
+                                    content: "Coming soon!";
+                                    display: block;
+                                    position: absolute;
+                                    top: -34px;
+                                    padding: 6px 12px;
+                                    // background-color: $blue;
+                                    background-image: linear-gradient(90deg, #56D1FF 0%, #3184FF 97%);
+                                    font-size: 14px;
+                                    font-weight: 500;
+                                    color: #fff;
+                                    border-radius: 28px;
+                                    opacity: 0;
+                                    transform: scale(0.9) translateY(6px);
+                                    transition: all 0.15s ease-in;
+                                    transition-delay: 0.1s;
+                                }
+                            }
                         }
                     }
                 }
@@ -349,7 +378,8 @@
                             box-shadow: 0 12px 30px 0 hsla(222, 47%, 10%, 0.7);
                             overflow: hidden;
                             border-radius: 6px;
-                            transition: all 0.8s ease-in;
+                            transition: all 0.6s ease-in-out;
+                            transform: scale(0.97);
                             &>img {
                                 width: 100%;
                                 border-radius: 6px;
@@ -473,7 +503,8 @@
                         height: 40%;
                         filter: blur(16px);
                         opacity: 0;
-                        transition: all 0.8s ease-in;
+                        transition: all 0.6s ease-in-out;
+                        transform: scale(0.8);
                         &:nth-of-type(1) {
                             width: 20%;
                             height: 33%;
@@ -737,6 +768,7 @@
         .column {
             .pic {
                 opacity: 1 !important;
+                transform: scale(1) !important;
             }
             &:nth-of-type(1) {
                 .pic {
@@ -772,18 +804,19 @@
     }
     .pic-blur {
         img {
-            opacity: 0.6 !important;
+            opacity: 0.4 !important;
+            transform: scale(1) !important;
             &:nth-of-type(1) {
-                transition-delay: 1s;
+                transition-delay: 0.3s !important;
             }
             &:nth-of-type(2) {
                 opacity: 0 !important;
             }
             &:nth-of-type() {
-                transition-delay: 0.5s;
+                transition-delay: 0.5s !important;
             }
             &:nth-of-type(4) {
-                transition-delay: 0.4s;
+                transition-delay: 0.4s !important;
             }
         }
     }

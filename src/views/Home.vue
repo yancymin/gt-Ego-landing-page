@@ -9,17 +9,17 @@
           <div class="right-links">
             <ul>
               <li>
-                <a href>产品与服务</a>
+                <a href="/">产品与服务</a>
               </li>
               <li>
-                <a href>文档中心</a>
+                <a href="https://doc.egoid.me" target="_blank">文档中心</a>
               </li>
               <li></li>
               <li>
-                <a href>登录</a>
+                <a href="https://account.egoid.me/signin" target="_blank">登录</a>
               </li>
               <li>
-                <a href>加入我们</a>
+                <a href="https://account.egoid.me/register" target="_blank">加入我们</a>
               </li>
             </ul>
           </div>
@@ -39,17 +39,17 @@
 
         <div class="menu-content">
           <ul>
-            <li>
+            <li style="display: none;">
               <a href>产品与服务</a>
             </li>
             <li>
-              <a href>文档中心</a>
+              <a href="https://doc.egoid.me" target="_blank">文档中心</a>
             </li>
             <li>
-              <a href>登录</a>
+              <a href="https://account.egoid.me/signin" target="_blank">登录</a>
             </li>
             <li>
-              <a href>加入我们</a>
+              <a href="https://account.egoid.me/register" target="_blank">加入我们</a>
             </li>
           </ul>
         </div>
@@ -66,7 +66,7 @@
             <p>Ego 是新一代去中心化的用户身份解决方案。我们提供多类型的身份验证，并将身份信息认证记录上传到区块链。用户通过 Ego 可以安全便捷的使用其它第三方的相关服务，而无需反复注册账号或者认证身份信息。</p>
             <ul>
               <li>
-                <a href="/">
+                <a>
                  <ios />
                 </a>
               </li>
@@ -319,8 +319,6 @@ export default {
     let scene = document.querySelector("#scene");
     let effectOffset = document.querySelector("#effect-offset");
     let offset3 = effectOffset.offsetTop + effectOffset.offsetHeight;
-
-    console.log(offset3 - window.scrollY)
 
     window.addEventListener("scroll", function() {
       if (offset - window.scrollY <= 0) {
