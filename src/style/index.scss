@@ -729,6 +729,24 @@
         transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
         transition-delay: 0.3s;
     }
+    .mobile-menu {
+        background-color: #1b2638 !important;
+        box-shadow: 0 1px 0 0 rgba(209, 214, 224, 0.1) !important;
+        .menu-logo {
+            img {
+                &:first-child {
+                    opacity: 0;
+                }
+            }
+        }
+        .menu-icon {
+            svg {
+               path {
+                fill: #A8B7D0;
+               }
+            }
+        }
+    }
     .nav {
         background-color: #1b2638;
         box-shadow: 0 1px 0 0 rgba(209, 214, 224, 0.1);
@@ -880,5 +898,11 @@
 @media (max-width: 1280px) {
     #hero-section {
         transform-origin: 50% -3%;
+    }
+}
+
+@media (min-width: 425px) {
+    .mobile-menu {
+        display: none;
     }
 }

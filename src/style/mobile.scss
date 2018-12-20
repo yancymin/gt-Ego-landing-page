@@ -1,5 +1,26 @@
 @media screen and (max-width: 425px) {
     #main {
+        .menu-show {
+            opacity: 1 !important;
+            transform: scale(1) !important;
+            ul {
+                li {
+                    opacity: 1 !important;
+                    transition: all 0.5s ease-in !important;
+                    transform: none !important;
+          
+                    &:nth-of-type(2) {
+                        transition-delay: 0.1s !important;
+                    }
+                    &:nth-of-type(3) {
+                        transition-delay: 0.25s !important
+                    }
+                    &:nth-of-type(4) {
+                        transition-delay: 0.35s !important;
+                    }
+                }
+            }
+        }
         @mixin h2 {
             font-size: 24px;
             line-height: 32px;
@@ -28,7 +49,11 @@
             display: none;
         }
         .mobile-menu {
+            opacity: 0;
+            top: -50px;
             z-index: 10000;
+            display: flex;
+            justify-content: center;
             position: fixed;
             width: 100%;
             height: 48px;
@@ -40,6 +65,7 @@
                 justify-content: space-between;
                 align-items: center;
                 position: relative;
+                width: 100%;
                 height: 100%;
                 padding: 0 20px;
                 .menu-logo {
@@ -58,31 +84,41 @@
                     }
                 }
                 .menu-icon {
-                    img {
-                        width: 28px;
+                    cursor: pointer;
+                    svg {
+                        font-size: 28px;
                     }
                 }
             }
             .menu-content {
+                opacity: 0;
                 z-index: 10000;
                 position: fixed;
-                width: 100%;
-                height: 40vh;
-                background-color: #1B2638;
+                top: 54px;
+                width: 90%;
+                height: auto;
+                border-radius: 6px;
+                background-color: #243449;
                 display: flex;
                 justify-content: space-between;
                 box-shadow: 0 8px 24px 0 rgba(14, 21, 37, 0.7);
+                transition: all 0.3s ease;
+                transform: scale(0.95);
+                perspective: 2000px;
+                transform-origin: 100% 0;
                 ul {
                     display: flex;
                     justify-content: center;
                     align-items: flex-start;
                     flex-direction: column;
                     width: 100%;
-                    margin: 20px;
+                    margin: 10px 20px;
                     li {
+                        opacity: 0;
                         width: 100%;
                         padding: 20px 0;
                         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
                         a {
                             text-decoration-line: none;
                             color: #5a6371;
@@ -93,7 +129,7 @@
                             }
                         }
                         &:last-child {
-                           border: none;
+                            border: none;
                             a {
                                 display: flex;
                                 justify-content: center;

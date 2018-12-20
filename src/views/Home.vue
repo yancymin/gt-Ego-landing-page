@@ -4,7 +4,7 @@
       <div class="nav" id="nav">
         <div class="nav_wrap">
           <div class="nav-logo">
-            <logo />
+            <logo/>
           </div>
           <div class="right-links">
             <ul>
@@ -29,32 +29,31 @@
       <div class="mobile-menu">
         <div class="menu-wrap">
           <div class="menu-logo">
-            <img src="../assets/ego_logo.svg" alt="">
-            <img src="../assets/ego_logo2.svg" alt="" id="black-logo">
+            <img src="../assets/ego_logo.svg" alt>
+            <img src="../assets/ego_logo2.svg" alt id="black-logo">
           </div>
           <div class="menu-icon">
-            <img src="../assets/menu.svg" alt="">
+            <menuIcon/>
           </div>
         </div>
 
         <div class="menu-content">
-            <ul>
-              <li>
-                <a href>产品与服务</a>
-              </li>
-              <li>
-                <a href>文档中心</a>
-              </li>
-              <li>
-                <a href>登录</a>
-              </li>
-              <li>
-                <a href>加入我们</a>
-              </li>
-            </ul>
+          <ul>
+            <li>
+              <a href>产品与服务</a>
+            </li>
+            <li>
+              <a href>文档中心</a>
+            </li>
+            <li>
+              <a href>登录</a>
+            </li>
+            <li>
+              <a href>加入我们</a>
+            </li>
+          </ul>
         </div>
       </div>
-
 
       <div class="header" id="wrapper">
         <div class="section-wrap">
@@ -223,7 +222,6 @@
                   <img src="../assets/shop.jpg" alt>
                 </div>
               </div>
-             
             </div>
 
             <div class="pic-blur">
@@ -287,6 +285,7 @@ import textField from "../components/textField.vue";
 import dots from "../components/icons/dots.vue";
 import attestation from "../components/icons/attestation.vue";
 import logo from "../components/icons/logo.vue";
+import menuIcon from "../components/icons/menuIcon.vue";
 
 export default {
   name: "home",
@@ -295,7 +294,8 @@ export default {
     textField,
     dots,
     attestation,
-    logo
+    logo,
+    menuIcon
   },
   mounted: function() {
     let secondary = document.querySelector("#main");
@@ -308,6 +308,10 @@ export default {
     let offset = card2.offsetTop + (card2.offsetHeight - 200);
     let offset2 = h2.offsetTop + h2.offsetHeight;
     let navOffset = header.offsetTop + header.offsetHeight;
+
+    let menuContent = document.querySelector(".menu-content");
+    let menuIcon = document.querySelector(".menu-icon");
+    let mobileMenu = document.querySelector(".mobile-menu");
 
     window.addEventListener("scroll", function() {
       if (offset - window.scrollY <= 0) {
@@ -323,10 +327,18 @@ export default {
       if (navOffset - window.scrollY <= 0) {
         nav.style.top = "0";
         nav.style.opacity = "1";
+        mobileMenu.style.top = "0";
+        mobileMenu.style.opacity = "1";
       } else {
         nav.style.top = "-80px";
         nav.style.opacity = "0";
+        mobileMenu.style.top = "-80px";
+        mobileMenu.style.opacity = "0";
       }
+    });
+
+    menuIcon.addEventListener("click", function() {
+      menuContent.classList.toggle("menu-show");
     });
   }
 };
