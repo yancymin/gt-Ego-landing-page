@@ -51,7 +51,7 @@
                                 background-color: $blue;
                                 margin-right: 0;
                                 &:hover {
-                                   opacity: 0.8;
+                                    opacity: 0.8;
                                 }
                             }
                         }
@@ -123,19 +123,21 @@
                             justify-content: center;
                             align-items: center;
                             height: 62px;
-                            border: 1px solid rgba(184, 199, 224, 0.7);;
+                            border: 1px solid rgba(184, 199, 224, 0.7);
+                            ;
                             border-radius: 6px;
                             padding: 0 20px;
                             background-color: #fff;
                             transition: all 0.2s ease-in;
                             transition-delay: 0.05s;
-                            &:hover,&:active {
-                            background-color: #1B2638;
-                            svg {
-                                path {
-                                    fill: #fff;
+                            &:hover,
+                            &:active {
+                                background-color: #1B2638;
+                                svg {
+                                    path {
+                                        fill: #fff;
+                                    }
                                 }
-                            }
                             }
                             &:active {
                                 transform: scale(0.95);
@@ -339,6 +341,7 @@
                         width: (96vw/6);
                         padding: 8px;
                         .pic {
+                            opacity: 0;
                             position: relative;
                             display: flex;
                             justify-content: center;
@@ -346,7 +349,7 @@
                             box-shadow: 0 12px 30px 0 hsla(222, 47%, 10%, 0.7);
                             overflow: hidden;
                             border-radius: 6px;
-                            transition: $normalTs; // transition-delay: 0.1s;
+                            transition: all 0.8s ease-in;
                             &>img {
                                 width: 100%;
                                 border-radius: 6px;
@@ -469,7 +472,8 @@
                         position: relative;
                         height: 40%;
                         filter: blur(16px);
-                        opacity: 0.6;
+                        opacity: 0;
+                        transition: all 0.8s ease-in;
                         &:nth-of-type(1) {
                             width: 20%;
                             height: 33%;
@@ -480,7 +484,6 @@
                             width: 12%;
                             top: 10%;
                             left: 5%;
-                            filter: blur(35px);
                             opacity: 0;
                         }
                         &:nth-of-type(3) {
@@ -508,11 +511,11 @@
                     }
                 }
                 .effect-app {
-                    width: 50%;
                     position: absolute;
                     right: -60px;
                     top: -30px;
                     pointer-events: none;
+                    perspective: 101rem;
                     .bg-dots {
                         position: relative;
                         top: 100px;
@@ -522,17 +525,17 @@
                         z-index: 100;
                         opacity: 1;
                         position: absolute;
+                        transform: rotateX(9deg) rotateZ(9deg) rotateY(-18deg);
                     }
                     img {
                         position: relative;
-                        right: -266px;
-                        top: 20px;
-                        width: 40%;
+                        left: 303px;
+                        top: -20px;
                         height: 470px;
                         padding: 14px;
                         background-color: #fff;
                         border-radius: 2rem;
-                        box-shadow: 3px 10px 40px rgba(13, 20, 37, 0.6);
+                        box-shadow: 30px 26px 70px rgba(13, 20, 37, 0.4), inset 0 0 10px #afbfd2;
                         border-image: linear-gradient( to bottom, transparent, #fff 40%, #fff 60%, transparent) 1;
                         transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
                     }
@@ -710,23 +713,80 @@
 }
 
 #iphone-1 {
-    animation-delay: 0.6s;
-}
-
-#iphone-2 {
     animation-delay: 0.8s;
 }
 
-#iphone-3 {
-    animation-delay: 0.65s;
-}
-
-#iphone-4 {
+#iphone-2 {
     animation-delay: 0.7s;
 }
 
-#iphone-5 {
+#iphone-3 {
     animation-delay: 0.6s;
+}
+
+#iphone-4 {
+    animation-delay: 0.5s;
+}
+
+#iphone-5 {
+    animation-delay: 0.4s;
+}
+
+.scene-show {
+    .pic-flow {
+        .column {
+            .pic {
+                opacity: 1 !important;
+            }
+            &:nth-of-type(1) {
+                .pic {
+                    &:nth-of-type(1) {
+                        transition-delay: 0.6s !important;
+                    }
+                    &:nth-of-type(2) {
+                        transition-delay: 0.8s !important;
+                    }
+                }
+            }
+            &:nth-of-type(2) {
+                .pic {
+                    &:nth-of-type(1) {
+                        transition-delay: 0.4s !important;
+                    }
+                    &:nth-of-type(2) {
+                        transition-delay: 0.6s !important;
+                    }
+                }
+            }
+            &:nth-of-type(3) {
+                .pic {
+                    transition-delay: 0.7s !important;
+                }
+            }
+            &:nth-of-type(4) {
+                .pic {
+                    transition-delay: 0.5s !important;
+                }
+            }
+        }
+    }
+    .pic-blur {
+        img {
+            opacity: 0.6 !important;
+            &:nth-of-type(1) {
+                transition-delay: 1s;
+            }
+            &:nth-of-type(2) {
+                opacity: 0 !important;
+            }
+            &:nth-of-type() {
+                transition-delay: 0.5s;
+            }
+            &:nth-of-type(4) {
+                transition-delay: 0.4s;
+            }
+        }
+    }
 }
 
 .main-dark {
@@ -747,9 +807,9 @@
         }
         .menu-icon {
             svg {
-               path {
-                fill: #A8B7D0;
-               }
+                path {
+                    fill: #A8B7D0;
+                }
             }
         }
     }
@@ -828,7 +888,7 @@
                     .app {
                         .effect-img {
                             background-color: #283548;
-                            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.4), 3px 10px 40px rgba(13, 20, 37, 0.6);
+                            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.4), 30px 40px 100px rgba(13, 20, 37, 0.9);
                         }
                     }
                 }
@@ -843,27 +903,12 @@
             .effect {
                 .effect-app {
                     .app {
-                        opacity: 1; // animation: appShow 1s ease forwards;
+                        opacity: 1;
                     }
                 }
             }
         }
-    } // @keyframes appShow {
-    //     0% {
-    //         opacity: 0;
-    //         transform: translateX(-20px) rotateX(10deg) rotateZ(12deg) rotateY(-9deg);
-    //     }
-    //     30% {
-    //         opacity: 1;
-    //     }
-    //     50% {
-    //         opacity: 1;
-    //     }
-    //     100% {
-    //         opacity: 1;
-    //         transform: rotateX(10deg) rotateZ(12deg) rotateY(-9deg);
-    //     }
-    // }
+    }
 }
 
 @media (max-height: 1010px) {

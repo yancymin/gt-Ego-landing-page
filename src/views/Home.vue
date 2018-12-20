@@ -85,24 +85,24 @@
                 <div class="space"></div>
                 <div class="space"></div>
                 <a class="iphonex" id="iphone-1">
-                  <img src="../assets/3.jpg">
+                  <img src="../assets/hero-5.jpg">
                 </a>
               </div>
               <div class="container">
                 <div class="space"></div>
                 <a class="iphonex" id="iphone-2">
-                  <img src="../assets/5.jpg">
+                  <img src="../assets/hero-4.jpg">
                 </a>
                 <a class="iphonex" id="iphone-3">
-                  <img src="../assets/2.jpg">
+                  <img src="../assets/hero-2.jpg">
                 </a>
               </div>
               <div class="container">
                 <a class="iphonex" id="iphone-4">
-                  <img src="../assets/4.jpg">
+                  <img src="../assets/hero-3.jpg">
                 </a>
                 <a class="iphonex" id="iphone-5">
-                  <img src="../assets/1.jpg">
+                  <img src="../assets/hero-1.jpg">
                 </a>
               </div>
             </section>
@@ -142,21 +142,21 @@
             <h2 id="animate2">Ego 帮助满足用户隐私保护的要求和企业 KYC 需求</h2>
             <attestation/>
 
-            <p>用户可以在 Ego 应用程序选择不同的认证方进行多类型的身份信息认证，所有经认证的身份信息只会保存在本地，任何第三方未获得用户授权都无法获得该信息，保证您的信息不被泄露。
+            <p id="effect-offset">用户可以在 Ego 应用程序选择不同的认证方进行多类型的身份信息认证，所有经认证的身份信息只会保存在本地，任何第三方未获得用户授权都无法获得该信息，保证您的信息不被泄露。
               <br>
               <br>企业用户可以选择不同的身份信息，在获得用户的许可后即可或者经过认证的各类身份信息，满足您的 KYC 需求。
             </p>
 
             <div class="effect-app">
               <div class="app">
-                <img class="effect-img" src="../assets/3.jpg" alt>
+                <img class="effect-img" src="../assets/hero-5.jpg" alt>
               </div>
               <div class="bg-dots">
                 <dots/>
               </div>
             </div>
           </section>
-          <section class="scene">
+          <section class="scene" id="scene">
             <span>多场景通用</span>
             <h2>打造网络通用身份，助您享受互联网生活</h2>
             <div class="pic-flow">
@@ -306,7 +306,6 @@ export default {
     let card2 = document.querySelector("#card2");
     let h2 = document.querySelector("#h2");
     let header = document.querySelector(".header");
-    // let primary = document.querySelector('.primary')
     let nav = document.querySelector("#nav");
 
     let offset = card2.offsetTop + (card2.offsetHeight - 200);
@@ -316,6 +315,12 @@ export default {
     let menuContent = document.querySelector(".menu-content");
     let menuIcon = document.querySelector(".menu-icon");
     let mobileMenu = document.querySelector(".mobile-menu");
+
+    let scene = document.querySelector("#scene");
+    let effectOffset = document.querySelector("#effect-offset");
+    let offset3 = effectOffset.offsetTop + effectOffset.offsetHeight;
+
+    console.log(offset3 - window.scrollY)
 
     window.addEventListener("scroll", function() {
       if (offset - window.scrollY <= 0) {
@@ -339,6 +344,11 @@ export default {
         mobileMenu.style.top = "-80px";
         mobileMenu.style.opacity = "0";
       }
+
+      if(offset3 - window.scrollY <= -1700 ) {
+        scene.classList.add("scene-show")
+      }
+      
     });
 
     menuIcon.addEventListener("click", function() {
