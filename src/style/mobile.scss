@@ -393,3 +393,30 @@
         }
     }
 }
+
+@media screen and (max-width: 320px) {
+    #main {
+        .header {
+            .section-wrap {
+                transform: scale(0.8);
+            }
+        }
+        .secondary {
+            .section-wrap {
+
+                .column {
+                    width: 100% !important;
+                    img {
+                        width: 100% !important;
+                        height: auto !important;
+                    }
+                }
+                .pic {
+                    width: 100% !important;
+                    height: auto !important;
+                }
+
+            }
+        }
+    }
+}
