@@ -85,9 +85,6 @@
                 }
                 .menu-icon {
                     cursor: pointer;
-                    svg {
-                        font-size: 28px;
-                    }
                 }
             }
             .menu-content {
@@ -138,7 +135,8 @@
                                 width: 100%;
                                 border-radius: 3px;
                                 color: #fff;
-                                background: linear-gradient(180deg, #83caff 0%, #4c9aff 100%);
+                                background-color: #4C9AFF;
+                                padding-bottom: 2px;
                             }
                         }
                     }
@@ -173,9 +171,10 @@
                         a {
                             height: 46px;
                             border-radius: 4px;
-                            img {
-                                width: 110%;
-                                padding: 0 12px;
+                            padding: 0 12px;
+                            svg {
+                                width: auto;
+                                height: 30px;
                             }
                         }
                     }

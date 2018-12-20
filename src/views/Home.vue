@@ -67,12 +67,12 @@
             <ul>
               <li>
                 <a href="/">
-                  <img src="../assets/ios.svg" alt>
+                 <ios />
                 </a>
               </li>
               <li>
                 <a href="https://download.egoid.me/app/download/ego-newest.apk">
-                  <img src="../assets/android.svg" alt>
+                 <android/>
                 </a>
               </li>
             </ul>
@@ -286,6 +286,8 @@ import dots from "../components/icons/dots.vue";
 import attestation from "../components/icons/attestation.vue";
 import logo from "../components/icons/logo.vue";
 import menuIcon from "../components/icons/menuIcon.vue";
+import ios from "../components/icons/ios.vue";
+import android from "../components/icons/android.vue";
 
 export default {
   name: "home",
@@ -295,7 +297,9 @@ export default {
     dots,
     attestation,
     logo,
-    menuIcon
+    menuIcon,
+    android,
+    ios
   },
   mounted: function() {
     let secondary = document.querySelector("#main");
