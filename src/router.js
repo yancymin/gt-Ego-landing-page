@@ -17,6 +17,11 @@ export default new Router({
       path: '/service',
       name: 'service',
       component: () => import(/* webpackChunkName: "about" */ './views/Service.vue')
+    },
+    {
+      path: '/private',
+      name: 'private',
+      component: () => import(/* webpackChunkName: "about" */ './views/Private.vue')
     }
   ]
 })

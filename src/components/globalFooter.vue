@@ -2,7 +2,6 @@
   <div class="footer">
     <div class="footer-wrap">
       <div class="copyright-info">
-       <!-- <footerLogo /> -->
        <img src="../assets/footer_logo.svg" alt="">
         <p>Copyright © 2018 EGO
           <br>
@@ -17,7 +16,7 @@
             <a href="/service">服务条款</a>
           </li>
           <li>
-            <a href>隐私声明</a>
+            <a href="/private">隐私声明</a>
           </li>
           <li>
             合作请发送邮件至
@@ -49,6 +48,11 @@ export default {
     align-items: flex-end;
     width: 1180px;
     padding: 40px 0 24px 0;
+    margin: 0 20px;
+
+    @media screen and (max-width: 768px){
+      margin: 0;
+    }
     .copyright-info {
       img {
         margin-bottom: 32px;

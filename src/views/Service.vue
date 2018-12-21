@@ -77,28 +77,35 @@
 4. 本协议签订地为中华人民共和国湖北省武汉东湖新技术开发区。
 5. 本协议的成立、生效、履行、解释及纠纷解决，适用中华人民共和国法律，争议管辖地为本协议签订地有管辖权的人民法院。
 6. 本服务协议最终解释权归极意网络所有。
+
+                                                                                                                                                                                                                                                                                                                                   武汉极意网络科技有限公司
     </pre>
     </div>
-<globalFooter />
+    <globalFooter/>
   </div>
 </template>
 
 <script>
-import pcNav from '../components/pcNav.vue'
-import mobileNav from '../components/mobileNav.vue'
-import globalFooter from '../components/globalFooter.vue'
+import pcNav from "../components/pcNav.vue";
+import mobileNav from "../components/mobileNav.vue";
+import globalFooter from "../components/globalFooter.vue";
 
 export default {
-  name: 'service',
+  name: "service",
   components: {
     pcNav,
     mobileNav,
     globalFooter
   },
-  mounted: function () {
-
+  mounted: function() {
+    let mobileMenu = document.querySelector(".mobile-menu");
+    let menuIcon = document.querySelector(".menu-icon");
+    let menuContent = document.querySelector(".menu-content");
+    menuIcon.addEventListener("click", function() {
+      menuContent.classList.toggle("menu-show");
+    });
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>
@@ -106,7 +113,8 @@ export default {
 @import "../style/index.scss";
 @import "../style/global.scss";
 
-.main, #main {
+.main,
+#main {
   .nav {
     opacity: 1;
     top: 0 !important;
@@ -126,7 +134,7 @@ export default {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 85vw;
+    // width: 85vw;
     padding: 100px 0 80px 0;
     h1 {
       @include h3(26px, 26px);
@@ -135,6 +143,15 @@ export default {
     pre {
       @include p(14px, 26px);
       white-space: pre-wrap;
+      margin: 0 24px;
+      @media screen and (min-width: 1180px) {
+        width: 1180px;
+      }
+    }
+    p {
+      width: 100%;
+      text-align: right;
+      margin: 0 20px;
     }
   }
 }

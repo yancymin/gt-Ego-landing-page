@@ -172,4 +172,10 @@ export default {
     }
   }
 }
+
+@media screen and (min-width:768px) {
+    .mobile-menu {
+        display: none;
+    }
+}
 </style>

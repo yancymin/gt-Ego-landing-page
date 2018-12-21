@@ -58,6 +58,7 @@ export default {
             justify-content: space-between;
             align-items: center;
             width: 1180px;
+            margin: 0 20px;
             .right-links {
                 ul {
                     display: flex;
