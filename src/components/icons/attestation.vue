@@ -56,7 +56,7 @@
               ></path>
               <g>
                 <rect
-                  id="Rectangle-2"
+                  id="mail-bg"
                   fill="url(#linearGradient-1)"
                   fill-rule="nonzero"
                   x="0"
