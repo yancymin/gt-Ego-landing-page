@@ -1,60 +1,8 @@
 <template>
   <div class="home">
     <div class="main" id="main">
-      <div class="nav" id="nav">
-        <div class="nav_wrap">
-          <div class="nav-logo">
-            <logo/>
-          </div>
-          <div class="right-links">
-            <ul>
-              <li>
-                <a href="/">产品与服务</a>
-              </li>
-              <li>
-                <a href="https://doc.egoid.me" target="_blank">文档中心</a>
-              </li>
-              <li></li>
-              <li>
-                <a href="https://account.egoid.me/signin" target="_blank">登录</a>
-              </li>
-              <li>
-                <a href="https://account.egoid.me/register" target="_blank">加入我们</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="mobile-menu">
-        <div class="menu-wrap">
-          <div class="menu-logo">
-            <img src="../assets/ego_logo.svg" alt>
-            <img src="../assets/ego_logo2.svg" alt id="black-logo">
-          </div>
-          <div class="menu-icon">
-            <menuIcon/>
-          </div>
-        </div>
-
-        <div class="menu-content">
-          <ul>
-            <li style="display: none;">
-              <a href>产品与服务</a>
-            </li>
-            <li>
-              <a href="https://doc.egoid.me" target="_blank">文档中心</a>
-            </li>
-            <li>
-              <a href="https://account.egoid.me/signin" target="_blank">登录</a>
-            </li>
-            <li>
-              <a href="https://account.egoid.me/register" target="_blank">加入我们</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-
+      <pcNav/>
+      <mobileNav/>
       <div class="header" id="wrapper">
         <div class="section-wrap">
           <section>
@@ -238,11 +186,11 @@
             <h2>Ego 邀请更多企业和我们一起完善身份安全生态</h2>
             <p>获取更私密安全的 KYC 服务，请留下您的联系方式，我们会尽快与您联系。</p>
             <div class="form-wrap">
-              <textField  name="name" label="姓名" placeholder="请输入姓名"/>
-              <textField  name="company" label="公司名称" placeholder="请输入公司名称"/>
-              <textField  name="position" label="职位" placeholder="请输入职位"/>
-              <textField  name="mail" label="工作邮箱" placeholder="请输入工作邮箱"/>
-              <textField  name="phone" label="手机号码" placeholder="请输入手机号码"/>
+              <textField name="name" label="姓名" placeholder="请输入姓名"/>
+              <textField name="company" label="公司名称" placeholder="请输入公司名称"/>
+              <textField name="position" label="职位" placeholder="请输入职位"/>
+              <textField name="mail" label="工作邮箱" placeholder="请输入工作邮箱"/>
+              <textField name="phone" label="手机号码" placeholder="请输入手机号码"/>
               <textArea name="requirement" label="需求" placeholder="请描述您想要获得什么样的服务" rows="5"/>
               <button>提交</button>
             </div>
@@ -250,33 +198,7 @@
         </div>
       </div>
 
-      <footer>
-        <div class="footer-wrap">
-          <div class="copyright-info">
-            <img src="../assets/footer_logo.svg" alt>
-            <p>Copyright © 2018 EGO
-              <br>
-              <br>武汉极意网络科技有限公司
-              <br>鄂 ICP 备 12016193 号 -1
-              <br>增值电信业务经营许可证鄂 B2-20170058
-            </p>
-          </div>
-          <div class="info">
-            <ul>
-              <li>
-                <a href>服务条款</a>
-              </li>
-              <li>
-                <a href>隐私声明</a>
-              </li>
-              <li>
-                合作请发送邮件至
-                <a href="mailto:contact@egoid.me">contact@egoid.me</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </footer>
+      <globalFooter/>
     </div>
   </div>
 </template>
@@ -285,12 +207,13 @@
 import mouse from '../components/mouse.vue'
 import textField from '../components/textField.vue'
 import textArea from '../components/textArea.vue'
+import pcNav from '../components/pcNav.vue'
 import dots from '../components/icons/dots.vue'
 import attestation from '../components/icons/attestation.vue'
-import logo from '../components/icons/logo.vue'
-import menuIcon from '../components/icons/menuIcon.vue'
 import ios from '../components/icons/ios.vue'
 import android from '../components/icons/android.vue'
+import mobileNav from '../components/mobileNav.vue'
+import globalFooter from '../components/globalFooter.vue'
 
 export default {
   name: 'home',
@@ -299,42 +222,32 @@ export default {
     textField,
     dots,
     attestation,
-    logo,
-    menuIcon,
     android,
     ios,
-    textArea
+    textArea,
+    pcNav,
+    mobileNav,
+    globalFooter
   },
   mounted: function () {
     let secondary = document.querySelector('#main')
     let card2 = document.querySelector('#card2')
     let h2 = document.querySelector('#h2')
-    let header = document.querySelector('.header')
-    let nav = document.querySelector('#nav')
 
     let offset = card2.offsetTop + (card2.offsetHeight - 200)
     let offset2 = h2.offsetTop + h2.offsetHeight
-    let navOffset = header.offsetTop + header.offsetHeight
-
-    let menuContent = document.querySelector('.menu-content')
-    let menuIcon = document.querySelector('.menu-icon')
-    let mobileMenu = document.querySelector('.mobile-menu')
 
     let scene = document.querySelector('#scene')
     let effectOffset = document.querySelector('#effect-offset')
     let offset3 = effectOffset.offsetTop + effectOffset.offsetHeight
 
+    let nav = document.querySelector('.nav')
+    let header = document.querySelector('.header')
+    let navOffset = header.offsetTop + header.offsetHeight
+
+    let mobileMenu = document.querySelector('.mobile-menu')
+
     window.addEventListener('scroll', function () {
-      if (offset - window.scrollY <= 0) {
-        secondary.classList.add('main-dark')
-      } else {
-        secondary.classList.remove('main-dark')
-      }
-      if (offset2 - window.scrollY <= 0) {
-        secondary.classList.add('main-white-motion')
-      } else {
-        secondary.classList.remove('main-white-motion')
-      }
       if (navOffset - window.scrollY <= 0) {
         nav.style.top = '0'
         nav.style.opacity = '1'
@@ -347,13 +260,20 @@ export default {
         mobileMenu.style.opacity = '0'
       }
 
+      if (offset - window.scrollY <= 0) {
+        secondary.classList.add('main-dark')
+      } else {
+        secondary.classList.remove('main-dark')
+      }
+      if (offset2 - window.scrollY <= 0) {
+        secondary.classList.add('main-white-motion')
+      } else {
+        secondary.classList.remove('main-white-motion')
+      }
+
       if (offset3 - window.scrollY <= -1700) {
         scene.classList.add('scene-show')
       }
-    })
-
-    menuIcon.addEventListener('click', function () {
-      menuContent.classList.toggle('menu-show')
     })
   }
 }
