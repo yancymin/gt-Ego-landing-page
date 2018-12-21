@@ -67,12 +67,12 @@
             <ul>
               <li>
                 <a>
-                 <ios />
+                  <ios/>
                 </a>
               </li>
               <li>
                 <a href="https://download.egoid.me/app/download/ego-newest.apk">
-                 <android/>
+                  <android/>
                 </a>
               </li>
             </ul>
@@ -142,7 +142,9 @@
             <h2 id="animate2">Ego 帮助满足用户隐私保护的要求和企业 KYC 需求</h2>
             <attestation/>
 
-            <p id="effect-offset">用户可以在 Ego 应用程序选择不同的认证方进行多类型的身份信息认证，所有经认证的身份信息只会保存在本地，任何第三方未获得用户授权都无法获得该信息，保证您的信息不被泄露。
+            <p
+              id="effect-offset"
+            >用户可以在 Ego 应用程序选择不同的认证方进行多类型的身份信息认证，所有经认证的身份信息只会保存在本地，任何第三方未获得用户授权都无法获得该信息，保证您的信息不被泄露。
               <br>
               <br>企业用户可以选择不同的身份信息，在获得用户的许可后即可或者经过认证的各类身份信息，满足您的 KYC 需求。
             </p>
@@ -236,12 +238,12 @@
             <h2>Ego 邀请更多企业和我们一起完善身份安全生态</h2>
             <p>获取更私密安全的 KYC 服务，请留下您的联系方式，我们会尽快与您联系。</p>
             <div class="form-wrap">
-              <textField tittle="姓名" placeholder="请输入姓名"/>
-              <textField tittle="公司名称" placeholder="请输入公司名称"/>
-              <textField tittle="职位" placeholder="请输入职位"/>
-              <textField tittle="工作邮箱" placeholder="请输入工作邮箱"/>
-              <textField tittle="手机号码" placeholder="请输入手机号码"/>
-              <textField tittle="需求" placeholder="请描述您想要获得什么样的服务"/>
+              <textField  name="name" label="姓名" placeholder="请输入姓名"/>
+              <textField  name="company" label="公司名称" placeholder="请输入公司名称"/>
+              <textField  name="position" label="职位" placeholder="请输入职位"/>
+              <textField  name="mail" label="工作邮箱" placeholder="请输入工作邮箱"/>
+              <textField  name="phone" label="手机号码" placeholder="请输入手机号码"/>
+              <textArea name="requirement" label="需求" placeholder="请描述您想要获得什么样的服务" rows="5"/>
               <button>提交</button>
             </div>
           </section>
@@ -282,6 +284,7 @@
 <script>
 import mouse from "../components/mouse.vue";
 import textField from "../components/textField.vue";
+import textArea from "../components/textArea.vue";
 import dots from "../components/icons/dots.vue";
 import attestation from "../components/icons/attestation.vue";
 import logo from "../components/icons/logo.vue";
@@ -299,7 +302,8 @@ export default {
     logo,
     menuIcon,
     android,
-    ios
+    ios,
+    textArea
   },
   mounted: function() {
     let secondary = document.querySelector("#main");
@@ -343,10 +347,9 @@ export default {
         mobileMenu.style.opacity = "0";
       }
 
-      if(offset3 - window.scrollY <= -1700 ) {
-        scene.classList.add("scene-show")
+      if (offset3 - window.scrollY <= -1700) {
+        scene.classList.add("scene-show");
       }
-      
     });
 
     menuIcon.addEventListener("click", function() {

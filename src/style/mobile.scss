@@ -1,8 +1,9 @@
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 768px) {
     #main {
         .menu-show {
             opacity: 1 !important;
             transform: scale(1) !important;
+            pointer-events: all !important;
             ul {
                 li {
                     opacity: 1 !important;
@@ -103,6 +104,7 @@
                 transform: scale(0.95);
                 perspective: 2000px;
                 transform-origin: 100% 0;
+                pointer-events: none;
                 ul {
                     display: flex;
                     justify-content: center;
@@ -264,7 +266,7 @@
                             img {
                                 width: auto;
                                 height: 300px;
-                                left: 130px;
+                                left: 40vw;
                                 top: 0;
                                 padding: 10px;
                                 border-radius: 1rem;
@@ -356,6 +358,12 @@
                             }
                         }
                     }
+                .text-area {
+                    width: 100%;
+                    textarea {
+                        width: auto;
+                    }
+                }
                     button {
                         width: 100%;
                     }
