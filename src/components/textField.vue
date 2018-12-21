@@ -9,13 +9,13 @@
 
 <script>
 export default {
-  name: "textField",
+  name: 'textField',
   props: {
     placeholder: String,
     label: String,
     name: String
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>

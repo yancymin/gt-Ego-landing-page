@@ -7,7 +7,7 @@
 
 <script>
 export default {
-  name: "textArea",
+  name: 'textArea',
   props: {
     placeholder: String,
     label: String,
@@ -16,7 +16,7 @@ export default {
     cols: String,
     rows: String
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>
