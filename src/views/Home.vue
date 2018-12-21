@@ -204,19 +204,19 @@
 </template>
 
 <script>
-import mouse from '../components/mouse.vue'
-import textField from '../components/textField.vue'
-import textArea from '../components/textArea.vue'
-import pcNav from '../components/pcNav.vue'
-import dots from '../components/icons/dots.vue'
-import attestation from '../components/icons/attestation.vue'
-import ios from '../components/icons/ios.vue'
-import android from '../components/icons/android.vue'
-import mobileNav from '../components/mobileNav.vue'
-import globalFooter from '../components/globalFooter.vue'
+import mouse from "../components/mouse.vue";
+import textField from "../components/textField.vue";
+import textArea from "../components/textArea.vue";
+import pcNav from "../components/pcNav.vue";
+import dots from "../components/icons/dots.vue";
+import attestation from "../components/icons/attestation.vue";
+import ios from "../components/icons/ios.vue";
+import android from "../components/icons/android.vue";
+import mobileNav from "../components/mobileNav.vue";
+import globalFooter from "../components/globalFooter.vue";
 
 export default {
-  name: 'home',
+  name: "home",
   components: {
     mouse,
     textField,
@@ -229,54 +229,59 @@ export default {
     mobileNav,
     globalFooter
   },
-  mounted: function () {
-    let secondary = document.querySelector('#main')
-    let card2 = document.querySelector('#card2')
-    let h2 = document.querySelector('#h2')
+  mounted: function() {
+    let secondary = document.querySelector("#main");
+    let card2 = document.querySelector("#card2");
+    let h2 = document.querySelector("#h2");
 
-    let offset = card2.offsetTop + (card2.offsetHeight - 200)
-    let offset2 = h2.offsetTop + h2.offsetHeight
+    let offset = card2.offsetTop + (card2.offsetHeight - 200);
+    let offset2 = h2.offsetTop + h2.offsetHeight;
 
-    let scene = document.querySelector('#scene')
-    let effectOffset = document.querySelector('#effect-offset')
-    let offset3 = effectOffset.offsetTop + effectOffset.offsetHeight
+    let scene = document.querySelector("#scene");
+    let effectOffset = document.querySelector("#effect-offset");
+    let offset3 = effectOffset.offsetTop + effectOffset.offsetHeight;
 
-    let nav = document.querySelector('.nav')
-    let header = document.querySelector('.header')
-    let navOffset = header.offsetTop + header.offsetHeight
+    let nav = document.querySelector(".nav");
+    let header = document.querySelector(".header");
+    let navOffset = header.offsetTop + header.offsetHeight;
 
-    let mobileMenu = document.querySelector('.mobile-menu')
+    let mobileMenu = document.querySelector(".mobile-menu");
+    let menuIcon = document.querySelector(".menu-icon");
+    let menuContent = document.querySelector(".menu-content");
+    menuIcon.addEventListener("click", function() {
+      menuContent.classList.toggle("menu-show");
+    });
 
-    window.addEventListener('scroll', function () {
+    window.addEventListener("scroll", function() {
       if (navOffset - window.scrollY <= 0) {
-        nav.style.top = '0'
-        nav.style.opacity = '1'
-        mobileMenu.style.top = '0'
-        mobileMenu.style.opacity = '1'
+        nav.style.top = "0";
+        nav.style.opacity = "1";
+        mobileMenu.style.top = "0";
+        mobileMenu.style.opacity = "1";
       } else {
-        nav.style.top = '-80px'
-        nav.style.opacity = '0'
-        mobileMenu.style.top = '-80px'
-        mobileMenu.style.opacity = '0'
+        nav.style.top = "-80px";
+        nav.style.opacity = "0";
+        mobileMenu.style.top = "-80px";
+        mobileMenu.style.opacity = "0";
       }
 
       if (offset - window.scrollY <= 0) {
-        secondary.classList.add('main-dark')
+        secondary.classList.add("main-dark");
       } else {
-        secondary.classList.remove('main-dark')
+        secondary.classList.remove("main-dark");
       }
       if (offset2 - window.scrollY <= 0) {
-        secondary.classList.add('main-white-motion')
+        secondary.classList.add("main-white-motion");
       } else {
-        secondary.classList.remove('main-white-motion')
+        secondary.classList.remove("main-white-motion");
       }
 
       if (offset3 - window.scrollY <= -1700) {
-        scene.classList.add('scene-show')
+        scene.classList.add("scene-show");
       }
-    })
+    });
   }
-}
+};
 </script>
 
 <style lang="scss">

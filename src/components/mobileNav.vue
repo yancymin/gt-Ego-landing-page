@@ -2,10 +2,11 @@
   <div class="mobile-menu">
     <div class="menu-wrap">
       <a href="/">
-      <div class="menu-logo">
-        <img src="../assets/ego_logo.svg" alt>
-        <img src="../assets/ego_logo2.svg" alt id="black-logo">
-      </div></a>
+        <div class="menu-logo">
+          <img src="../assets/ego_logo.svg" alt>
+          <img src="../assets/ego_logo2.svg" alt id="black-logo">
+        </div>
+      </a>
       <div class="menu-icon">
         <menuIcon/>
       </div>
@@ -31,20 +32,17 @@
 </template>
 
 <script>
-import menuIcon from '../components/icons/menuIcon.vue'
+import menuIcon from "../components/icons/menuIcon.vue";
 
 export default {
-  name: 'pcNav',
+  name: "pcNav",
   components: {
     menuIcon
   },
-  mounted: function () {
-    let menuContent = document.querySelector('.menu-content')
-    menuIcon.addEventListener('click', function () {
-      menuContent.classList.toggle('menu-show')
-    })
-  }
-}
+//   mounted: function() {
+ 
+//   }
+};
 </script>
 
 <style lang="scss">
