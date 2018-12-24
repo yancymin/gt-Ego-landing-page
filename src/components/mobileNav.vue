@@ -15,7 +15,7 @@
     <div class="menu-content">
       <ul>
         <li>
-          <a href="/">产品与服务</a>
+         <router-link to="/" >产品与服务</router-link>
         </li>
         <li>
           <a href="https://doc.egoid.me" target="_blank">文档中心</a>
