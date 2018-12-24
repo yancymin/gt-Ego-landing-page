@@ -2,12 +2,12 @@
     <div class="nav">
         <div class="nav_wrap">
           <div class="nav-logo">
-          <a href="/">  <logo/></a>
+          <router-link to="/"><logo/></router-link> 
           </div>
           <div class="right-links">
             <ul>
               <li>
-                <a href="/">产品与服务</a>
+               <router-link to="/">产品与服务</router-link>
               </li>
               <li>
                 <a href="https://doc.egoid.me" target="_blank">文档中心</a>

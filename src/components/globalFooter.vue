@@ -13,10 +13,10 @@
       <div class="info">
         <ul>
           <li>
-            <a href="/service">服务条款</a>
+          <router-link to="/service">服务条款</router-link>
           </li>
           <li>
-            <a href="/private">隐私声明</a>
+          <router-link to="/private">隐私声明</router-link>
           </li>
           <li>
             合作请发送邮件至
