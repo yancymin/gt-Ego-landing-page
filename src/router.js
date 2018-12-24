@@ -11,17 +11,37 @@ export default new Router({
     {
       path: '/',
       name: 'home',
+      meta: {
+        title: 'EGO - 区块链身份平台，去中心化、可复用、隐私保护'
+      },
       component: Home
     },
     {
       path: '/service',
       name: 'service',
-      component: () => import(/* webpackChunkName: "about" */ './views/Service.vue')
+      meta: {
+        title: '服务条款'
+      },
+      component: () =>
+        import('./views/Service.vue')
     },
     {
       path: '/private',
       name: 'private',
-      component: () => import(/* webpackChunkName: "about" */ './views/Private.vue')
+      meta: {
+        title: '隐私声明'
+      },
+      component: () =>
+        import('./views/Private.vue')
+    },
+    {
+      path: '/FAQ',
+      name: 'FQA',
+      meta: {
+        title: '常见问题'
+      },
+      component: () =>
+        import('./views/FAQ.vue')
     }
   ]
 })
