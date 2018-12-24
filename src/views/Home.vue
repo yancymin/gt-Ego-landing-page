@@ -204,19 +204,28 @@
 </template>
 
 <script>
-import mouse from "../components/mouse.vue";
-import textField from "../components/textField.vue";
-import textArea from "../components/textArea.vue";
-import pcNav from "../components/pcNav.vue";
-import dots from "../components/icons/dots.vue";
-import attestation from "../components/icons/attestation.vue";
-import ios from "../components/icons/ios.vue";
-import android from "../components/icons/android.vue";
-import mobileNav from "../components/mobileNav.vue";
-import globalFooter from "../components/globalFooter.vue";
+import mouse from '../components/mouse.vue'
+import textField from '../components/textField.vue'
+import textArea from '../components/textArea.vue'
+import pcNav from '../components/pcNav.vue'
+import dots from '../components/icons/dots.vue'
+import attestation from '../components/icons/attestation.vue'
+import ios from '../components/icons/ios.vue'
+import android from '../components/icons/android.vue'
+import mobileNav from '../components/mobileNav.vue'
+import globalFooter from '../components/globalFooter.vue'
 
 export default {
-  name: "home",
+  name: 'home',
+  data () {
+    return {
+      one: true,
+      requestId: {},
+      preScrollHeight: 0,
+      nextScrollHeight: 0,
+      doms: {}
+    }
+  },
   components: {
     mouse,
     textField,
@@ -229,59 +238,89 @@ export default {
     mobileNav,
     globalFooter
   },
-  mounted: function() {
-    let secondary = document.querySelector("#main");
-    let card2 = document.querySelector("#card2");
-    let h2 = document.querySelector("#h2");
+  mounted: function () {
+    const self = this
+    this.doms.secondary = document.querySelector('#main')
 
-    let offset = card2.offsetTop + (card2.offsetHeight - 200);
-    let offset2 = h2.offsetTop + h2.offsetHeight;
+    const h2 = document.querySelector('#h2')
+    this.doms.offset2 = h2.offsetTop + h2.offsetHeight
 
-    let scene = document.querySelector("#scene");
-    let effectOffset = document.querySelector("#effect-offset");
-    let offset3 = effectOffset.offsetTop + effectOffset.offsetHeight;
+    const card2 = document.querySelector('#card2')
+    this.doms.offset = card2.offsetTop + (card2.offsetHeight - 200)
 
-    let nav = document.querySelector(".nav");
-    let header = document.querySelector(".header");
-    let navOffset = header.offsetTop + header.offsetHeight;
+    const header = document.querySelector('.header')
+    this.doms.navOffset = header.offsetTop + header.offsetHeight
 
-    let mobileMenu = document.querySelector(".mobile-menu");
-    let menuIcon = document.querySelector(".menu-icon");
-    let menuContent = document.querySelector(".menu-content");
-    menuIcon.addEventListener("click", function() {
-      menuContent.classList.toggle("menu-show");
-    });
+    this.doms.nav = document.querySelector('.nav')
+    this.doms.menuContent = document.querySelector('.menu-content')
+    this.doms.menuIcon = document.querySelector('.menu-icon')
+    this.doms.mobileMenu = document.querySelector('.mobile-menu')
+    this.doms.scene = document.querySelector('#scene')
 
-    window.addEventListener("scroll", function() {
-      if (navOffset - window.scrollY <= 0) {
-        nav.style.top = "0";
-        nav.style.opacity = "1";
-        mobileMenu.style.top = "0";
-        mobileMenu.style.opacity = "1";
+    const effectOffset = document.querySelector('#effect-offset')
+    this.doms.offset3 = effectOffset.offsetTop + effectOffset.offsetHeight
+
+    this.doms.onePageHeight = document.querySelector('.header').offsetHeight
+    let ticking = false
+    window.addEventListener('scroll', function (e) {
+      self.nextScrollHeight = window.scrollY
+      if (!ticking) {
+        window.requestAnimationFrame(function () {
+          self.doSomething(self.nextScrollHeight, self.doms.onePageHeight)
+          ticking = false
+        })
+      }
+      ticking = true
+    })
+
+    this.doms.menuIcon.addEventListener('click', function () {
+      self.doms.menuContent.classList.toggle('menu-show')
+    })
+  },
+  methods: {
+    doSomething (scrollPos, onePageHeight) {
+      console.log(scrollPos)
+      this.nextScrollHeight = scrollPos
+      const isUp = (this.nextScrollHeight - this.preScrollHeight > 0) && (this.nextScrollHeight < onePageHeight)
+
+      if (isUp && this.one) {
+        window.scroll({
+          top: onePageHeight,
+          left: 0,
+          behavior: 'smooth'
+        })
+        this.one = false
+      }
+      this.preScrollHeight = scrollPos
+
+      if (this.doms.offset - scrollPos <= 0) {
+        this.doms.secondary.classList.add('main-dark')
       } else {
-        nav.style.top = "-80px";
-        nav.style.opacity = "0";
-        mobileMenu.style.top = "-80px";
-        mobileMenu.style.opacity = "0";
+        this.doms.secondary.classList.remove('main-dark')
+      }
+      if (this.doms.offset2 - scrollPos <= 0) {
+        this.doms.secondary.classList.add('main-white-motion')
+      } else {
+        this.doms.secondary.classList.remove('main-white-motion')
+      }
+      if (this.doms.navOffset - scrollPos <= 0) {
+        this.doms.nav.style.top = '0'
+        this.doms.nav.style.opacity = '1'
+        this.doms.mobileMenu.style.top = '0'
+        this.doms.mobileMenu.style.opacity = '1'
+      } else {
+        this.doms.nav.style.top = '-80px'
+        this.doms.nav.style.opacity = '0'
+        this.doms.mobileMenu.style.top = '-80px'
+        this.doms.mobileMenu.style.opacity = '0'
       }
 
-      if (offset - window.scrollY <= 0) {
-        secondary.classList.add("main-dark");
-      } else {
-        secondary.classList.remove("main-dark");
+      if (this.doms.offset3 - scrollPos <= -1700) {
+        this.doms.scene.classList.add('scene-show')
       }
-      if (offset2 - window.scrollY <= 0) {
-        secondary.classList.add("main-white-motion");
-      } else {
-        secondary.classList.remove("main-white-motion");
-      }
-
-      if (offset3 - window.scrollY <= -1700) {
-        scene.classList.add("scene-show");
-      }
-    });
+    }
   }
-};
+}
 </script>
 
 <style lang="scss">
