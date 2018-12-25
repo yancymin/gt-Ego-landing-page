@@ -39,7 +39,7 @@
 （8）侮辱或者诽谤他人，侵害他人合法权益的；
 （9）含有法律、行政法规禁止的其他内容的。
 如您存在上述行为，我方有权按照本服务协议第二条第5款规定进行处理。
-2. 您在使用本服务时，必须遵守中华人民共和国相关法律法规的规定，您应同意将不会利用该服务进行任何违法或不正当的活动，包括但不限于下列行为: 
+2. 您在使用本服务时，必须遵守中华人民共和国相关法律法规的规定，您应同意将不会利用该服务进行任何违法或不正当的活动，包括但不限于下列行为:
 （1）反对宪法所确定的基本原则的；
 （2）危害国家安全，泄露国家秘密，颠覆国家政权，破坏国家统一的；
 （3）损害国家荣誉和利益的，侵犯第三人合法权益；
@@ -69,7 +69,6 @@
 3.本协议中未明确授予您的权利将由我方保留。
 4.若有任何疑问，请通过浏览 https://www.egoid.me/ 网站下方的联系方式与我方联系。
 
-
                                                                                                                                                                                                                                                                                                                                    武汉极意网络科技有限公司
     </pre>
     </div>
@@ -78,26 +77,26 @@
 </template>
 
 <script>
-import pcNav from "../components/pcNav.vue";
-import mobileNav from "../components/mobileNav.vue";
-import globalFooter from "../components/globalFooter.vue";
+import pcNav from '../components/pcNav.vue'
+import mobileNav from '../components/mobileNav.vue'
+import globalFooter from '../components/globalFooter.vue'
 
 export default {
-  name: "service",
+  name: 'service',
   components: {
     pcNav,
     mobileNav,
     globalFooter
   },
-  mounted: function() {
-    let mobileMenu = document.querySelector(".mobile-menu");
-    let menuIcon = document.querySelector(".menu-icon");
-    let menuContent = document.querySelector(".menu-content");
-    menuIcon.addEventListener("click", function() {
-      menuContent.classList.toggle("menu-show");
-    });
+  mounted: function () {
+    let mobileMenu = document.querySelector('.mobile-menu')
+    let menuIcon = document.querySelector('.menu-icon')
+    let menuContent = document.querySelector('.menu-content')
+    menuIcon.addEventListener('click', function () {
+      menuContent.classList.toggle('menu-show')
+    })
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>

@@ -1,7 +1,8 @@
 <template>
   <div class="text-area">
-    <textarea :name="name" :id="id" :cols="cols" :rows="rows" :placeholder="placeholder"></textarea>
+    <textarea :class="{checked:tips}" :name="name" :id="id" :cols="cols" :rows="rows" :placeholder="placeholder" :value=value @change="changeInput"></textarea>
     <label :for="name">{{label}}</label>
+    <em v-if="tips" class="tips">请按照正确格式填写</em>
   </div>
 </template>
 
@@ -14,7 +15,24 @@ export default {
     name: String,
     id: String,
     cols: String,
-    rows: String
+    rows: String,
+    value: String,
+    tips: Boolean
+  },
+  computed: {
+    inputed () {
+      return this.value
+    }
+  },
+  model: {
+    prop: 'value',
+    event: 'update'
+  },
+  methods: {
+    changeInput (e) {
+      this.$emit('againInput', this.name)
+      this.$emit('update', e.target.value) // 子组件与父组件通讯，告知父组件更新绑定的值
+    }
   }
 }
 </script>
@@ -26,7 +44,17 @@ export default {
   display: flex;
   flex-direction: column;
   text-align: left;
-
+  position: relative;
+  .tips{
+    color: #ffc107;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-style: normal;
+  }
+  .checked {
+    box-shadow: inset 0 0 0 2px #ffc107;
+  }
   label {
     font-family: source-han-sans-simplified-c, sans-serif;
     font-weight: 300;

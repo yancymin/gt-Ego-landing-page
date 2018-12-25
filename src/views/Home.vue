@@ -186,13 +186,21 @@
             <h2>Ego 邀请更多企业和我们一起完善身份安全生态</h2>
             <p>获取更私密安全的 KYC 服务，请留下您的联系方式，我们会尽快与您联系。</p>
             <div class="form-wrap">
-              <textField name="name" label="姓名" placeholder="请输入姓名"/>
-              <textField name="company" label="公司名称" placeholder="请输入公司名称"/>
-              <textField name="position" label="职位" placeholder="请输入职位"/>
-              <textField name="mail" label="工作邮箱" placeholder="请输入工作邮箱"/>
-              <textField name="phone" label="手机号码" placeholder="请输入手机号码"/>
-              <textArea name="requirement" label="需求" placeholder="请描述您想要获得什么样的服务" rows="5"/>
-              <button>提交</button>
+              <div class="form">
+                <textField name="name" label="姓名" placeholder="请输入姓名" :value="form.name" v-model="form.name" :tips="isEmptys.name" @againInput="focus"/>
+                <textField name="company" label="公司名称" placeholder="请输入公司名称" :value="form.company" v-model="form.company" :tips="isEmptys.company" @againInput="focus"/>
+                <textField name="position" label="职位" placeholder="请输入职位" :value="form.position" v-model="form.position" :tips="isEmptys.position" @againInput="focus"/>
+                <textField name="work_email" label="工作邮箱" placeholder="请输入工作邮箱" :value="form.work_email" v-model="form.work_email" :tips="isEmptys.work_email" @againInput="focus"/>
+                <textField name="mobile_no" label="手机号码" placeholder="请输入手机号码" :value="form.mobile_no" v-model="form.mobile_no" :tips="isEmptys.mobile_no" @againInput="focus"/>
+                <textArea name="demand" label="需求" placeholder="请描述您想要获得什么样的服务" rows="5" :value="form.demand" v-model="form.demand" :tips="isEmptys.demand" @againInput="focus"/>
+                <button class="button" @click="submitContact">提交</button>
+              </div>
+              <div class="response-info">
+                <img src="../assets/success.png">
+                <pre>感谢你联系我们</pre>
+                <div class="line"></div>
+                <em>请检查你的邮件，我们的服务团队会尽快联系你。</em>
+              </div>
             </div>
           </section>
         </div>
@@ -223,7 +231,23 @@ export default {
       requestId: {},
       preScrollHeight: 0,
       nextScrollHeight: 0,
-      doms: {}
+      doms: {},
+      form: {
+        name: '',
+        company: '',
+        position: '',
+        work_email: '',
+        mobile_no: '',
+        demand: ''
+      },
+      isEmptys: {
+        name: false,
+        company: false,
+        position: false,
+        work_email: false,
+        mobile_no: false,
+        demand: false
+      }
     }
   },
   components: {
@@ -263,10 +287,14 @@ export default {
     this.doms.onePageHeight = document.querySelector('.header').offsetHeight
     let ticking = false
     window.addEventListener('scroll', function (e) {
+      if (!self.one) {
+        e.preventDefault()
+      }
       self.nextScrollHeight = window.scrollY
       if (!ticking) {
         window.requestAnimationFrame(function () {
           self.doSomething(self.nextScrollHeight, self.doms.onePageHeight)
+
           ticking = false
         })
       }
@@ -278,20 +306,47 @@ export default {
     })
   },
   methods: {
-    doSomething (scrollPos, onePageHeight) {
-      console.log(scrollPos)
-      this.nextScrollHeight = scrollPos
-      const isUp = (this.nextScrollHeight - this.preScrollHeight > 0) && (this.nextScrollHeight < onePageHeight)
-
-      if (isUp && this.one) {
-        window.scroll({
-          top: onePageHeight,
-          left: 0,
-          behavior: 'smooth'
-        })
-        this.one = false
+    focus (key) {
+      console.log(key)
+      this.isEmptys[key] = false
+    },
+    submitContact () {
+      let checkResult = true
+      for (let f in this.form) {
+        let v = this.form[f]
+        if (v.replace(/(^\s*)|(\s*$)/g, '').length === 0) {
+          this.isEmptys[f] = true
+          checkResult = false
+        }
       }
-      this.preScrollHeight = scrollPos
+      if (checkResult) {
+        let emailRex = /^[\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)+$/
+        let phoneRex = /^[0-9]*[1-9][0-9]*$/
+
+        if (emailRex.test(this.form.work_email) && phoneRex.test(this.form.mobile_no)) {
+          checkResult = true
+        } else {
+          checkResult = false
+        }
+
+        this.isEmptys.work_email = !emailRex.test(this.form.work_email)
+        this.isEmptys.mobile_no = !phoneRex.test(this.form.mobile_no)
+      }
+
+      if (!checkResult) return
+      this.$http.post('https://account.egoid.me/www/contact_us', this.from).then(
+        res => {
+          if (res.data && res.data.status === 1) {
+            document.querySelector('.form').classList.add('hide')
+            document.querySelector('.response-info').classList.add('show')
+          } else {
+
+          }
+        })
+    },
+    doSomething (scrollPos, onePageHeight) {
+      // this.nextScrollHeight = scrollPos
+      // this.preScrollHeight = scrollPos
 
       if (this.doms.offset - scrollPos <= 0) {
         this.doms.secondary.classList.add('main-dark')
@@ -326,4 +381,48 @@ export default {
 <style lang="scss">
 @import "../style/mobile.scss";
 @import "../style/index.scss";
+
+.response-info {
+  position: absolute;
+  top: -10px;
+  right: 0;
+  height: 265px;
+  width: 483px;
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 3px;
+  background-color: #1B2638;
+  box-shadow: 0 20px 25px 0 rgba(13,23,39,0.55);
+  z-index: -1;
+  opacity: 0;
+  text-align: center;
+  transition: all .8s;
+  img {
+    display: block;
+    margin: auto;
+    margin-top: 40px;
+    width: 74px;
+    height: auto;
+  }
+  pre {
+    color: #B8C7E0;
+    font-size: 18px;
+    line-height: 18px;
+    margin-top: 30px;
+    margin-bottom: 22px;
+  }
+  .line {
+    margin: auto;
+    margin-bottom: 24px;
+    height: 1px;
+    width: 78.88px;
+    border-bottom: 1px solid #E1E7FF;
+    opacity: 0.14;
+  }
+  em {
+    color: #808DA4;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+  }
+}
 </style>

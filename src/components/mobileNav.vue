@@ -32,17 +32,17 @@
 </template>
 
 <script>
-import menuIcon from "../components/icons/menuIcon.vue";
+import menuIcon from '../components/icons/menuIcon.vue'
 
 export default {
-  name: "pcNav",
+  name: 'pcNav',
   components: {
     menuIcon
-  },
-//   mounted: function() {
- 
+  }
+  //   mounted: function() {
+
 //   }
-};
+}
 </script>
 
 <style lang="scss">

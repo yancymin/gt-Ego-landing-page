@@ -1,8 +1,9 @@
 <template>
   <div class="text-field">
     <div class="input-wrap">
-      <input type="text" :placeholder="placeholder" :name="name" >
+      <input :class="{checked: tips}" type="text" :placeholder="placeholder" :name="name" :value="inputed" @change="changeInput">
       <label :for="name" class="label">{{label}}</label>
+      <em v-if="tips" class="tips">请按照正确格式填写</em>
     </div>
   </div>
 </template>
@@ -10,10 +11,28 @@
 <script>
 export default {
   name: 'textField',
+
   props: {
+    value: String,
     placeholder: String,
     label: String,
-    name: String
+    name: String,
+    tips: Boolean
+  },
+  computed: {
+    inputed () {
+      return this.value
+    }
+  },
+  model: {
+    prop: 'value', // 绑定的值，通过父组件传递
+    event: 'update' // 自定义时间名
+  },
+  methods: {
+    changeInput (e) {
+      this.$emit('againInput', this.name)
+      this.$emit('update', e.target.value) // 子组件与父组件通讯，告知父组件更新绑定的值
+    }
   }
 }
 </script>
@@ -27,7 +46,17 @@ export default {
     display: flex;
     flex-direction: column;
     text-align: left;
-
+    position: relative;
+    .tips{
+      color: #ffc107;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      font-style: normal;
+    }
+    .checked {
+      box-shadow: inset 0 0 0 2px #ffc107;
+    }
     label {
       font-family: source-han-sans-simplified-c, sans-serif;
       font-weight: 300;

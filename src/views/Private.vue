@@ -59,7 +59,6 @@
 1.如出现我方网站、应用或服务停止运营的情形，我方会采取合理措施保护您个人信息安全，包括对您的个人信息进行删除或匿名化处理等，相关停止运营的通知将以网页公告、App推送通知、邮件、短信等方式通知到您。
 2.我方有权依据国家法律法规及运营需求等随时对本政策进行修改，我方将以网页公告、App推送通知、邮件、短信等方式对该等变更予以公布、通知。变更后的政策自以上述方式公布、通知之日起生效。为了您能及时接收到通知，建议您在联系方式更新时及时通知我方。若您在本政策变更的政策生效后，仍继续使用本服务的，即表示您已认真阅读、充分理解并同意接受该等变更；若您不同意的，您有权拒绝接受本政策，您应立即停止使用本服务。
 
-
                                                                                                                                                                                                                                                                                                                                    武汉极意网络科技有限公司
 
     </pre>
@@ -69,26 +68,26 @@
 </template>
 
 <script>
-import pcNav from "../components/pcNav.vue";
-import mobileNav from "../components/mobileNav.vue";
-import globalFooter from "../components/globalFooter.vue";
+import pcNav from '../components/pcNav.vue'
+import mobileNav from '../components/mobileNav.vue'
+import globalFooter from '../components/globalFooter.vue'
 
 export default {
-  name: "service",
+  name: 'service',
   components: {
     pcNav,
     mobileNav,
     globalFooter
   },
-  mounted: function() {
-    let mobileMenu = document.querySelector(".mobile-menu");
-    let menuIcon = document.querySelector(".menu-icon");
-    let menuContent = document.querySelector(".menu-content");
-    menuIcon.addEventListener("click", function() {
-      menuContent.classList.toggle("menu-show");
-    });
+  mounted: function () {
+    let mobileMenu = document.querySelector('.mobile-menu')
+    let menuIcon = document.querySelector('.menu-icon')
+    let menuContent = document.querySelector('.menu-content')
+    menuIcon.addEventListener('click', function () {
+      menuContent.classList.toggle('menu-show')
+    })
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>

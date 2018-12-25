@@ -589,6 +589,20 @@
                 justify-content: flex-end;
                 align-items: flex-end;
                 flex-direction: column;
+                .form {
+                    height: 742px;
+                    transition: all 0.8s;
+                }
+                .show{
+                    z-index: 2;
+                    opacity: 1;
+                }
+                .hide {
+                    height: 247px;
+                    overflow: hidden;
+                    opacity: 0;
+                    z-index: -1;
+                }
             }
         }
     }

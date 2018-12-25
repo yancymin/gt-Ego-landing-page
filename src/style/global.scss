@@ -1,4 +1,4 @@
-// ---------------color---------------- 
+// ---------------color----------------
 $bgColor: #F0F4FA;
 $bgColor-dark: #1B2638;
 $borderColor: #B8C7E0;
@@ -10,7 +10,7 @@ $textColor-2: #798392;
 $textColor-3: #B8C7E0;
 // ---------------transition---------------
 $normalTs: all 0.3s ease;
-// ---------------font---------------- 
+// ---------------font----------------
 @mixin h1($fontSize, $lineHeight) {
     color: $textColor-1;
     font-size: $fontSize;
@@ -70,7 +70,7 @@ body {
     background: #fff;
 }
 
-button {
+.button {
     width: 426px;
     position: relative;
     background: #0D1425;
@@ -88,7 +88,7 @@ button {
     transition: all 0.2s ease;
 }
 
-button:after {
+.button:after {
     content: '';
     position: absolute;
     top: 0;
@@ -99,11 +99,11 @@ button:after {
     background-image: linear-gradient(to right, transparent, rgba(142, 190, 253, 0.2), transparent);
 }
 
-button:hover:after {
+.button:hover:after {
     animation: shine 1.6s ease;
 }
 
-button:active {
+.button:active {
     transform: translateY(1px);
     box-shadow: 0 4px 16px #0D1425;
 }

@@ -2,7 +2,7 @@
     <div class="nav">
         <div class="nav_wrap">
           <div class="nav-logo">
-          <router-link to="/"><logo/></router-link> 
+          <router-link to="/"><logo/></router-link>
           </div>
           <div class="right-links">
             <ul>
