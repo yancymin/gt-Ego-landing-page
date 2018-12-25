@@ -1,10 +1,7 @@
 <template>
-  <div class="service main" id="main">
-    <mobileNav/>
-    <pcNav/>
+  <div class="service">
     <div class="content">
-      <h1>Ego 用户服务协议</h1>
-      <pre>
+     <pre>
 欢迎使用 “Ego”服务（以下简称：本服务），在同意签署《用户服务协议》（以下简称：本协议），并承诺遵守协议项下之条款时，使用本服务。
 本服务是Ego团队(以下或称“我方”)基于区块链技术为用户 (以下或称“您”)提供的创建私钥、加密储存、管理数字资产及授权、管理个人信息数据等服务。您确认，在您开始使用本服务前，您应当具备中华人民共和国法律规定的与您行为相适应的民事行为能力。本协议内容不会被您所属国家或地区的法律禁止。
 为了保障您的权益，您在申请注册流程中同意并确认本协议之前，应当认真阅读本协议。请您务必审慎阅读、充分理解各条款内容，特别是免除或者限制责任的条款、法律适用和争议解决条款。免除或者限制责任的条款将以粗体下划线标识，您应重点阅读。如您对本协议有任何疑问，可向我方客户进行咨询。
@@ -73,57 +70,21 @@
                                                                                                                                                                                                                                                                                                                                    武汉极意网络科技有限公司
     </pre>
     </div>
-    <globalFooter/>
   </div>
 </template>
 
-<script>
-import pcNav from "../components/pcNav.vue";
-import mobileNav from "../components/mobileNav.vue";
-import globalFooter from "../components/globalFooter.vue";
-
-export default {
-  name: "service",
-  components: {
-    pcNav,
-    mobileNav,
-    globalFooter
-  },
-  mounted: function() {
-    let mobileMenu = document.querySelector(".mobile-menu");
-    let menuIcon = document.querySelector(".menu-icon");
-    let menuContent = document.querySelector(".menu-content");
-    menuIcon.addEventListener("click", function() {
-      menuContent.classList.toggle("menu-show");
-    });
-  }
-};
-</script>
-
 <style lang="scss" scoped>
-@import "../style/mobile.scss";
-@import "../style/index.scss";
 @import "../style/global.scss";
 
 code {
-  span {
-    font-weight: 500;
-    color: $textColor-1;
-  }
+    span {
+        font-weight: 500;
+        color: #fff;
+    }
 }
 
-.main,
-#main {
-  .nav {
-    opacity: 1;
-    top: 0 !important;
-  }
-  .mobile-menu {
-    opacity: 1;
-    top: 0;
-  }
-}
 .service {
+  background-color: #0d1424;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -133,24 +94,21 @@ code {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    // width: 85vw;
-    padding: 100px 0 80px 0;
-    h1 {
-      @include h3(26px, 26px);
-      margin-bottom: 40px;
-    }
+    width: 90vw;
+    padding: 20px 0;
     pre {
       @include p(14px, 26px);
+      color: #b8c7e0 !important;
       white-space: pre-wrap;
-      margin: 0 24px;
+
       @media screen and (min-width: 1180px) {
         width: 1180px;
       }
     }
+
     p {
       width: 100%;
       text-align: right;
-      margin: 0 20px;
     }
   }
 }

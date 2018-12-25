@@ -1,9 +1,6 @@
 <template>
-  <div class="private main" id="main">
-    <mobileNav/>
-    <pcNav/>
+  <div class="privacy">
     <div class="content">
-      <h1>Ego 用户隐私协议</h1>
       <pre>
 本隐私政策旨在向用户（以下或称“您”）清晰地说明您的个人信息将（基于您的选择）被如何收集、存储、保护、使用及对外披露等。如果您不同意本隐私政策, 请不要访问或使用本服务。因此，我方建议您完整地阅读本隐私政策，以帮助您了解维护自己隐私权的方式。
 <code><span>一、适用范围及原则</span></code>
@@ -59,62 +56,25 @@
 1.如出现我方网站、应用或服务停止运营的情形，我方会采取合理措施保护您个人信息安全，包括对您的个人信息进行删除或匿名化处理等，相关停止运营的通知将以网页公告、App推送通知、邮件、短信等方式通知到您。
 2.我方有权依据国家法律法规及运营需求等随时对本政策进行修改，我方将以网页公告、App推送通知、邮件、短信等方式对该等变更予以公布、通知。变更后的政策自以上述方式公布、通知之日起生效。为了您能及时接收到通知，建议您在联系方式更新时及时通知我方。若您在本政策变更的政策生效后，仍继续使用本服务的，即表示您已认真阅读、充分理解并同意接受该等变更；若您不同意的，您有权拒绝接受本政策，您应立即停止使用本服务。
 
-
                                                                                                                                                                                                                                                                                                                                    武汉极意网络科技有限公司
 
     </pre>
     </div>
-    <globalFooter/>
   </div>
 </template>
 
-<script>
-import pcNav from "../components/pcNav.vue";
-import mobileNav from "../components/mobileNav.vue";
-import globalFooter from "../components/globalFooter.vue";
-
-export default {
-  name: "private",
-  components: {
-    pcNav,
-    mobileNav,
-    globalFooter
-  },
-  mounted: function() {
-    let mobileMenu = document.querySelector(".mobile-menu");
-    let menuIcon = document.querySelector(".menu-icon");
-    let menuContent = document.querySelector(".menu-content");
-    menuIcon.addEventListener("click", function() {
-      menuContent.classList.toggle("menu-show");
-    });
-  }
-};
-</script>
-
 <style lang="scss" scoped>
-@import "../style/mobile.scss";
-@import "../style/index.scss";
 @import "../style/global.scss";
 
 code {
-  span {
-    font-weight: 500;
-    color: $textColor-1;
-  }
+    span {
+        font-weight: 500;
+        color: #fff;
+    }
 }
 
-.main,
-#main {
-  .nav {
-    opacity: 1;
-    top: 0 !important;
-  }
-  .mobile-menu {
-    opacity: 1;
-    top: 0;
-  }
-}
-.private {
+.privacy {
+  background-color: #0d1424;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -124,14 +84,11 @@ code {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 85vw;
-    padding: 100px 0 80px 0;
-    h1 {
-      @include h3(26px, 26px);
-      margin-bottom: 40px;
-    }
+    width: 90vw;
+    padding: 20px 0;
     pre {
       @include p(14px, 26px);
+      color: #b8c7e0 !important;
       white-space: pre-wrap;
 
       @media screen and (min-width: 1180px) {
@@ -140,8 +97,8 @@ code {
     }
 
     p {
-        width: 100%;
-       text-align: right;
+      width: 100%;
+      text-align: right;
     }
   }
 }
