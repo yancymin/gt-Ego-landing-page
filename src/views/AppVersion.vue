@@ -3,8 +3,8 @@
     <div class="content" v-for="content,index in shots" :key="index">
       <h1>{{index+1}}. {{content.h1}}</h1>
       <div class="screenshots">
-        <img :src="content.imgSrc" alt>
-        <img :src="content.imgSrc2" alt>
+        <img :src="content.imgSrc" alt v-if="content.imgSrc">
+        <img :src="content.imgSrc2" alt v-if="content.imgSrc2">
       </div>
     </div>
   </div>
@@ -37,18 +37,18 @@ export default {
         }
       ]
     };
-  },
-  mounted: function() {
-    let img = document.getElementsByTagName("img");
-
-    for (var i = 0; i < img.length; i++) {
-      let imgSrc = img[i].src;
-      let srcLength = imgSrc.length
-    if (srcLength <= 0) {
-      img[i].style.display = "none";
-    }
-    }
   }
+//   mounted: function() {
+//     let img = document.getElementsByTagName("img");
+
+//     for (var i = 0; i < img.length; i++) {
+//       let imgSrc = img[i].src;
+//       let srcLength = imgSrc.length
+//     if (srcLength <= 0) {
+//       img[i].style.display = "none";
+//     }
+//     }
+//   }
 };
 </script>
 
