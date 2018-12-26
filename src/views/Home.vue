@@ -197,9 +197,9 @@
               </div>
               <div class="response-info">
                 <img src="../assets/success.png">
-                <pre>感谢你联系我们</pre>
+                <pre>感谢您提交信息</pre>
                 <div class="line"></div>
-                <em>请检查你的邮件，我们的服务团队会尽快联系你。</em>
+                <em>我们会在五个工作日内给您回复。</em>
               </div>
             </div>
           </section>

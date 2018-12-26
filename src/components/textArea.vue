@@ -59,8 +59,8 @@ export default {
     font-family: source-han-sans-simplified-c, sans-serif;
     font-weight: 300;
     font-style: normal;
-    position: relative;
-    top: -172px;
+ position: absolute;
+top: -30px;
     font-size: 16px;
     color: #b8c7e0;
     letter-spacing: 0;
