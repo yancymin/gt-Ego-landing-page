@@ -46,14 +46,14 @@ export default {
   text-align: left;
   position: relative;
   .tips{
-    color: #ffc107;
+    color: #4C9AFF;
     position: absolute;
     right: 0;
     bottom: 0;
     font-style: normal;
   }
   .checked {
-    box-shadow: inset 0 0 0 2px #ffc107;
+    box-shadow: inset 0 0 0 2px #4C9AFF;
   }
   label {
     font-family: source-han-sans-simplified-c, sans-serif;

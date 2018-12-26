@@ -4,10 +4,10 @@
       <div class="copyright-info">
        <img src="../assets/footer_logo.svg" alt="">
         <p>Copyright © 2018 EGO
-          <br>
+          <!-- <br>
           <br>武汉极意网络科技有限公司
           <br>鄂 ICP 备 12016193 号 -1
-          <br>增值电信业务经营许可证鄂 B2-20170058
+          <br>增值电信业务经营许可证鄂 B2-20170058 -->
         </p>
       </div>
       <div class="info">
