@@ -187,13 +187,63 @@
             <p>获取更私密安全的 KYC 服务，请留下您的联系方式，我们会尽快与您联系。</p>
             <div class="form-wrap">
               <div class="form">
-                <textField name="name" label="姓名" placeholder="请输入姓名" :value="form.name" v-model="form.name" :tips="isEmptys.name" @againInput="focus"/>
-                <textField name="company" label="公司名称" placeholder="请输入公司名称" :value="form.company" v-model="form.company" :tips="isEmptys.company" @againInput="focus"/>
-                <textField name="position" label="职位" placeholder="请输入职位" :value="form.position" v-model="form.position" :tips="isEmptys.position" @againInput="focus"/>
-                <textField name="work_email" label="工作邮箱" placeholder="请输入工作邮箱" :value="form.work_email" v-model="form.work_email" :tips="isEmptys.work_email" @againInput="focus"/>
-                <textField name="mobile_no" label="手机号码" placeholder="请输入手机号码" :value="form.mobile_no" v-model="form.mobile_no" :tips="isEmptys.mobile_no" @againInput="focus"/>
-                <textArea name="demand" label="需求" placeholder="请描述您想要获得什么样的服务" rows="5" :value="form.demand" v-model="form.demand" :tips="isEmptys.demand" @againInput="focus"/>
+                <textField
+                  name="name"
+                  label="姓名"
+                  placeholder="请输入姓名"
+                  :value="form.name"
+                  v-model="form.name"
+                  :tips="isEmptys.name"
+                  @againInput="focus"
+                />
+                <textField
+                  name="company"
+                  label="公司名称"
+                  placeholder="请输入公司名称"
+                  :value="form.company"
+                  v-model="form.company"
+                  :tips="isEmptys.company"
+                  @againInput="focus"
+                />
+                <textField
+                  name="position"
+                  label="职位"
+                  placeholder="请输入职位"
+                  :value="form.position"
+                  v-model="form.position"
+                  :tips="isEmptys.position"
+                  @againInput="focus"
+                />
+                <textField
+                  name="work_email"
+                  label="工作邮箱"
+                  placeholder="请输入工作邮箱"
+                  :value="form.work_email"
+                  v-model="form.work_email"
+                  :tips="isEmptys.work_email"
+                  @againInput="focus"
+                />
+                <textField
+                  name="mobile_no"
+                  label="手机号码"
+                  placeholder="请输入手机号码"
+                  :value="form.mobile_no"
+                  v-model="form.mobile_no"
+                  :tips="isEmptys.mobile_no"
+                  @againInput="focus"
+                />
+                <textArea
+                  name="demand"
+                  label="需求"
+                  placeholder="请描述您想要获得什么样的服务"
+                  rows="5"
+                  :value="form.demand"
+                  v-model="form.demand"
+                  :tips="isEmptys.demand"
+                  @againInput="focus"
+                />
                 <button class="button" @click="submitContact">提交</button>
+                <em v-if="errorMsg" class="error-msg">{{this.errorMsg}}</em>
               </div>
               <div class="response-info">
                 <img src="../assets/success.png">
@@ -247,7 +297,8 @@ export default {
         work_email: false,
         mobile_no: false,
         demand: false
-      }
+      },
+      errorMsg: ''
     }
   },
   components: {
@@ -322,7 +373,10 @@ export default {
         let emailRex = /^[\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)+$/
         let phoneRex = /^[0-9]*[1-9][0-9]*$/
 
-        if (emailRex.test(this.form.work_email) && phoneRex.test(this.form.mobile_no)) {
+        if (
+          emailRex.test(this.form.work_email) &&
+          phoneRex.test(this.form.mobile_no)
+        ) {
           checkResult = true
         } else {
           checkResult = false
@@ -334,13 +388,14 @@ export default {
 
       if (!checkResult) return
       const contactForm = this.form
-      this.$http.post('https://account.egoid.me/www/contact_us', contactForm).then(
-        res => {
+      this.$http
+        .post('https://account.egoid.me/www/contact_us', contactForm)
+        .then(res => {
           if (res.data && res.data.status === 1) {
             document.querySelector('.form').classList.add('hide')
             document.querySelector('.response-info').classList.add('show')
           } else {
-            alert(res.data.err_msg)
+            this.errorMsg = res.data.err_msg
           }
         })
     },
@@ -388,14 +443,14 @@ export default {
   right: 0;
   height: 265px;
   width: 483px;
-  border: 1px solid rgba(255,255,255,0.06);
+  border: 1px solid rgba(255, 255, 255, 0.06);
   border-radius: 3px;
-  background-color: #1B2638;
-  box-shadow: 0 20px 25px 0 rgba(13,23,39,0.55);
+  background-color: #1b2638;
+  box-shadow: 0 20px 25px 0 rgba(13, 23, 39, 0.55);
   z-index: -1;
   opacity: 0;
   text-align: center;
-  transition: all .8s;
+  transition: all 0.8s;
   img {
     display: block;
     margin: auto;
@@ -404,7 +459,7 @@ export default {
     height: auto;
   }
   pre {
-    color: #B8C7E0;
+    color: #b8c7e0;
     font-size: 18px;
     line-height: 18px;
     margin-top: 30px;
@@ -415,14 +470,21 @@ export default {
     margin-bottom: 24px;
     height: 1px;
     width: 78.88px;
-    border-bottom: 1px solid #E1E7FF;
+    border-bottom: 1px solid #e1e7ff;
     opacity: 0.14;
   }
   em {
-    color: #808DA4;
+    color: #808da4;
     font-size: 14px;
     line-height: 20px;
     text-align: center;
   }
+}
+.error-msg {
+  color: $blue;
+  font-style: normal;
+  font-family: source-han-sans-simplified-c, sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
 </style>
