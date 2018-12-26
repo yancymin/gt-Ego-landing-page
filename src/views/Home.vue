@@ -307,7 +307,6 @@ export default {
   },
   methods: {
     focus (key) {
-      console.log(key)
       this.isEmptys[key] = false
     },
     submitContact () {
@@ -334,13 +333,14 @@ export default {
       }
 
       if (!checkResult) return
-      this.$http.post('https://account.egoid.me/www/contact_us', this.from).then(
+      const contactForm = this.form
+      this.$http.post('https://account.egoid.me/www/contact_us', contactForm).then(
         res => {
           if (res.data && res.data.status === 1) {
             document.querySelector('.form').classList.add('hide')
             document.querySelector('.response-info').classList.add('show')
           } else {
-
+            alert(res.data.err_msg)
           }
         })
     },
