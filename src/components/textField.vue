@@ -40,7 +40,7 @@ export default {
 <style lang="scss" scoped>
 .text-field {
   margin-top: 16px;
-  margin-bottom: 8px;
+ margin-bottom: 30px;
 
   .input-wrap {
     display: flex;
@@ -92,7 +92,8 @@ export default {
         font-size: 16px;
         color: rgba(184, 199, 224, 0.2);
         letter-spacing: 0;
-        line-height: 22px;
+        line-height: 16px;
+        padding-top: 4px;
       }
 
       &:hover {
